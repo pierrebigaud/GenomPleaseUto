@@ -103,8 +103,8 @@ public class CellCycler : MonoBehaviour
     {
         cell.transform.DOScale(0.5f,1f);
         cell.transform.GetComponent<Animator>().SetBool("isMoving", true);
-        cell.transform.DOBlendableMoveBy(new Vector3(0, 4, 0), 1);
-        cell.transform.DOBlendableMoveBy(new Vector3(6, 0, 0), 1f).SetLoops(3, LoopType.Yoyo);
+        cell.transform.DOBlendableMoveBy(new Vector3(4.5f, -1.5f, 0), 0.5f);
+        cell.transform.DOBlendableMoveBy(new Vector3(0, 4.5f, 0), 1.2f);
         if (cell.GetComponentInChildren<CelluleBehaviour>().isRejected)
         {
             //TODO - Do cell killing animation
