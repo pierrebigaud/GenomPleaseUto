@@ -51,8 +51,8 @@ public class MenuManager : MonoBehaviour
 
     public void ReturnTitle(){
         Time.timeScale = 0;
+        SceneManager.LoadScene("ScenePierre");
         pausePanel.SetActive(false);
-        SceneManager.LoadScene("SampleScenelivio");
     }
 
     public void ReloadGame(){
@@ -60,14 +60,10 @@ public class MenuManager : MonoBehaviour
         pausePanel.SetActive(false);
         gamePanel.SetActive(true);
         gameOverPanel.SetActive(false);
-        SceneManager.LoadScene("SampleScenelivio");
+        SceneManager.LoadScene("ScenePierre");
         Time.timeScale = 1;
     }
     public void QuitGame(){
-        titlePanel.SetActive(false);
-        pausePanel.SetActive(false);
-        gamePanel.SetActive(false);
-        gameOverPanel.SetActive(false);
         Application.Quit();
     }
 
