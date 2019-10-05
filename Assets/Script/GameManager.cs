@@ -87,7 +87,6 @@ public class GameManager : MonoBehaviour
         Cells.doCellCycle();
         cellToExam = Cells.cells[5].GetComponentInChildren<CelluleBehaviour>();
         fTimeInvestigation = fTimeInvestigationMax;
-
     }
 
     private void FixedUpdate()
@@ -95,7 +94,7 @@ public class GameManager : MonoBehaviour
         slider.GetComponentInChildren<Image>().color = new Color(Mathf.Clamp((1 - fImmunityfCurrent / fImmunityLimite), 0, 1), 0, 0.5f,Mathf.Clamp((fImmunityfCurrent / fImmunityLimite), 0, 1));
         slider.value = fImmunityfCurrent;
         //if not in pause
-        if (!isGameInPause)
+        if (!isGameInPause || !gameOver)
         {
             // if no cell to exam, test if there is a cell
             if (cellToExam == null)
@@ -122,6 +121,20 @@ public class GameManager : MonoBehaviour
             else
             {
                 fTimeInvestigation -= 0.01f;
+            }
+
+            // if time is up
+            if (fTimeDay < 0)
+            {
+                /// 
+                /// this condition access another day to the difficulty settings
+                /// 
+            }
+
+            // soustract time
+            else
+            {
+                fTimeDay -= 0.01f;
             }
         }
     }
