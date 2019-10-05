@@ -14,7 +14,7 @@ public class GameManager : MonoBehaviour
     ///
 
     public Slider slider;         
-    public bool isGameInPause;
+    public bool isGameInPause, gameOver;
 
     // time comparing the investigation of the cell
     public float fTimeInvestigation;
@@ -100,8 +100,7 @@ public class GameManager : MonoBehaviour
             }
             if (fImmunityfCurrent > fImmunityLimite)
             {
-                //you have lose !
-                SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+                gameOver=true;
             }
 
             // if time is up
