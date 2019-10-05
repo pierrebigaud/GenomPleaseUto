@@ -14,11 +14,17 @@ public class GameManager : MonoBehaviour
     ///
 
     public Slider slider;         
-    public bool isGameInPause;
+    public bool isGameInPause, gameOver;
 
     // time comparing the investigation of the cell
     public float fTimeInvestigation;
     public float fTimeInvestigationMax = 10;
+
+    // this variables determines the length of a day.
+    public float fTimeDay;
+
+    // number of good answer
+    public int score;
 
     // value of the deprime meter for the cell
     public float fImmunityfCurrent;
@@ -35,24 +41,30 @@ public class GameManager : MonoBehaviour
 
     // cell to be examined
     public CelluleBehaviour cellToExam;
+    public GameObject tentacule;
+    public Text timer;
 
     private void Start(){
         slider.maxValue = fImmunityLimite;
+        timer.text = fTimeInvestigation + "";
     }
 
     // test of the cell
     public void TestInterrogation(bool isDestroy)
     {
-
+        tentacule.GetComponent<Animator>().ResetTrigger("pushButton");
+        tentacule.GetComponent<Animator>().SetTrigger("pushButton");
         /// GOOD RESPONSE !----------
         /// if you destroy a bad cell
         if (cellToExam.isBad && isDestroy)
         {
+            score++;
             cellToExam.isRejected = true;
         }
         // if you let pass a good cell
         else if (!cellToExam.isBad && !isDestroy)
         {
+            score++;
             cellToExam.isRejected = false;
         }
 
@@ -82,7 +94,7 @@ public class GameManager : MonoBehaviour
         slider.GetComponentInChildren<Image>().color = new Color(Mathf.Clamp((1 - fImmunityfCurrent / fImmunityLimite), 0, 1), 0, 0.5f,Mathf.Clamp((fImmunityfCurrent / fImmunityLimite), 0, 1));
         slider.value = fImmunityfCurrent;
         //if not in pause
-        if (!isGameInPause)
+        if (!isGameInPause || !gameOver)
         {
             // if no cell to exam, test if there is a cell
             if (cellToExam == null)
@@ -94,8 +106,7 @@ public class GameManager : MonoBehaviour
             }
             if (fImmunityfCurrent > fImmunityLimite)
             {
-                //you have lose !
-                SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+                gameOver=true;
             }
 
             // if time is up
@@ -110,6 +121,20 @@ public class GameManager : MonoBehaviour
             else
             {
                 fTimeInvestigation -= 0.01f;
+            }
+
+            // if time is up
+            if (fTimeDay < 0)
+            {
+                /// 
+                /// this condition access another day to the difficulty settings
+                /// 
+            }
+
+            // soustract time
+            else
+            {
+                fTimeDay -= 0.01f;
             }
         }
     }
