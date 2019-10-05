@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class MenuManager : MonoBehaviour
 {
@@ -12,8 +13,6 @@ public class MenuManager : MonoBehaviour
     public GameObject gameOverPanel;
 
     private AudioSource audioSource;
-
-    private bool isRunning = false;
 
     // Start is called before the first frame update
     void Start()
@@ -29,6 +28,7 @@ public class MenuManager : MonoBehaviour
        if(Input.GetKeyDown(KeyCode.Escape)){
           Pause();
        }
+      
     }
 
     public void Play(){
