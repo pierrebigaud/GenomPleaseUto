@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
@@ -12,7 +13,7 @@ public class GameManager : MonoBehaviour
     /// True/false : examine if the choice is true or false
     ///
 
-
+    public Slider slider;         
     public bool isGameInPause;
 
     // time comparing the investigation of the cell
@@ -34,6 +35,10 @@ public class GameManager : MonoBehaviour
 
     // cell to be examined
     public CelluleBehaviour cellToExam;
+
+    private void Start(){
+        slider.maxValue = fImmunityLimite;
+    }
 
     // test of the cell
     public void TestInterrogation(bool isDestroy)
@@ -74,7 +79,8 @@ public class GameManager : MonoBehaviour
 
     private void FixedUpdate()
     {
-
+        slider.value = fImmunityfCurrent;
+        Debug.Log(fImmunityfCurrent);
         //if not in pause
         if (!isGameInPause)
         {
