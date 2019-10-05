@@ -43,6 +43,10 @@ public class GameManager : MonoBehaviour
     public CelluleBehaviour cellToExam;
     public GameObject tentacule;
     public Text timer;
+    public GameObject goodCell;
+    public GameObject badCell;
+    public GameObject tooSlow;
+
 
     private void Start(){
         slider.maxValue = fImmunityLimite;
@@ -74,6 +78,7 @@ public class GameManager : MonoBehaviour
         {
             cellToExam.isRejected = true;
             fImmunityfCurrent += fMistakeGoodCellDestroy;
+            StartCoroutine(textAppear(goodCell));
 
         }
         // if you pass a bad cell
@@ -81,6 +86,7 @@ public class GameManager : MonoBehaviour
         {
             fImmunityfCurrent += fMistakeBadCellPass;
             cellToExam.isRejected = false;
+            StartCoroutine(textAppear(badCell));
         }
 
         // base action when test , do a cell cycle and reset the time
@@ -115,6 +121,7 @@ public class GameManager : MonoBehaviour
                 // resetTime and add mistake to immunity
                 fTimeInvestigation = fTimeInvestigationMax;
                 fImmunityfCurrent += fMistakeTime;
+                StartCoroutine(textAppear(tooSlow));
             }
 
             // soustract time
@@ -137,5 +144,11 @@ public class GameManager : MonoBehaviour
                 fTimeDay -= 0.01f;
             }
         }
+    }
+
+    IEnumerator textAppear(GameObject text){
+        text.SetActive(true);
+        yield return new WaitForSeconds(2);
+        text.SetActive(false);
     }
 }

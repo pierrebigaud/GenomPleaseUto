@@ -101,10 +101,10 @@ public class CellCycler : MonoBehaviour
     //Send the judge cell to its fate
     public void depart(GameObject cell)
     {
-        cell.transform.DOScale(0.5f,1f);
+        cell.transform.DOScale(0.8f,1f);
         cell.transform.GetComponent<Animator>().SetBool("isMoving", true);
-        cell.transform.DOBlendableMoveBy(new Vector3(4.5f, -1.5f, 0), 0.5f);
-        cell.transform.DOBlendableMoveBy(new Vector3(0, 4.5f, 0), 1.2f);
+        cell.transform.DOMove(new Vector3(10, 0, 0), 2f);
+
         if (cell.GetComponentInChildren<CelluleBehaviour>().isRejected)
         {
             //TODO - Do cell killing animation
