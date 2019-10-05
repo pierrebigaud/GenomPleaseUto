@@ -26,7 +26,9 @@ public class MenuManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+       if(Input.GetKeyDown(KeyCode.Escape)){
+          Pause();
+       }
     }
 
     public void Play(){
@@ -66,5 +68,6 @@ public class MenuManager : MonoBehaviour
     public void QuitGame(){
         Application.Quit();
     }
+
 
 }
