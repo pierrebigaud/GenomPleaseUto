@@ -835,6 +835,7 @@ MonoBehaviour:
   gamePanel: {fileID: 291546697}
   pausePanel: {fileID: 1598450049}
   gameOverPanel: {fileID: 1149224737}
+  _GameManager: {fileID: 806893954}
 --- !u!82 &473706595
 AudioSource:
   m_ObjectHideFlags: 0
@@ -1178,8 +1179,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   slider: {fileID: 1805019842}
   isGameInPause: 0
+  gameOver: 0
   fTimeInvestigation: 5
   fTimeInvestigationMax: 10
+  fTimeDay: 0
+  score: 0
   fImmunityfCurrent: 0
   fImmunityBegin: 0
   fImmunityLimite: 20
@@ -1188,6 +1192,8 @@ MonoBehaviour:
   fMistakeBadCellPass: 1
   Cells: {fileID: 1769381898}
   cellToExam: {fileID: 0}
+  tentacule: {fileID: 0}
+  timer: {fileID: 0}
 --- !u!1 &812409127
 GameObject:
   m_ObjectHideFlags: 0
@@ -2691,7 +2697,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1618091747}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.6, y: 0, z: -2}
+  m_LocalPosition: {x: 1.6, y: -9, z: -2}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
