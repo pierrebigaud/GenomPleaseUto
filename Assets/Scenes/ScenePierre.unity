@@ -26,7 +26,7 @@ RenderSettings:
   m_AmbientIntensity: 1
   m_AmbientMode: 3
   m_SubtractiveShadowColor: {r: 0.42, g: 0.478, b: 0.627, a: 1}
-  m_SkyboxMaterial: {fileID: 0}
+  m_SkyboxMaterial: {fileID: 2100000, guid: 5c5eb2c7962a5fe4f8c861c5763702c1, type: 2}
   m_HaloStrength: 0.5
   m_FlareStrength: 1
   m_FlareFadeSpeed: 3
@@ -988,6 +988,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9da12f4ef7a7f8d419bfef4a354f3641, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  slider: {fileID: 0}
   isGameInPause: 0
   fTimeInvestigation: 0
   fTimeInvestigationMax: 10
@@ -1034,7 +1035,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -0.22491455, y: 0.00015258789}
+  m_AnchoredPosition: {x: -0.22491455, y: 0.00012207031}
   m_SizeDelta: {x: -0.45007, y: -0.3}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &849020019
@@ -1993,7 +1994,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -0.22491455, y: -0.05000305}
+  m_AnchoredPosition: {x: -0.22491455, y: -0.050048828}
   m_SizeDelta: {x: -0.5, y: -0.099976}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1503524556
