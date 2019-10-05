@@ -20,6 +20,9 @@ public class GameManager : MonoBehaviour
     public float fTimeInvestigation;
     public float fTimeInvestigationMax = 10;
 
+    //nombre de bonnes réponses
+    public int score;
+
     // value of the deprime meter for the cell
     public float fImmunityfCurrent;
     public float fImmunityBegin;
@@ -48,11 +51,13 @@ public class GameManager : MonoBehaviour
         /// if you destroy a bad cell
         if (cellToExam.isBad && isDestroy)
         {
+            score++;
             cellToExam.isRejected = true;
         }
         // if you let pass a good cell
         else if (!cellToExam.isBad && !isDestroy)
         {
+            score++;
             cellToExam.isRejected = false;
         }
 
@@ -75,6 +80,7 @@ public class GameManager : MonoBehaviour
         Cells.doCellCycle();
         cellToExam = Cells.cells[5].GetComponentInChildren<CelluleBehaviour>();
         fTimeInvestigation = fTimeInvestigationMax;
+
     }
 
     private void FixedUpdate()
