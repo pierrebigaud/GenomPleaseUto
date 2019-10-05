@@ -20,7 +20,10 @@ public class GameManager : MonoBehaviour
     public float fTimeInvestigation;
     public float fTimeInvestigationMax = 10;
 
-    //nombre de bonnes réponses
+    // this variables determines the length of a day.
+    public float fTimeDay;
+
+    // number of good answer
     public int score;
 
     // value of the deprime meter for the cell
