@@ -11,6 +11,8 @@ public class MenuManager : MonoBehaviour
     public GameObject gamePanel;
     public GameObject pausePanel;
     public GameObject gameOverPanel;
+    public GameObject _GameManager;
+    private GameManager script;
 
     private AudioSource audioSource;
 
@@ -28,7 +30,13 @@ public class MenuManager : MonoBehaviour
        if(Input.GetKeyDown(KeyCode.Escape)){
           Pause();
        }
-      
+       script = _GameManager.GetComponent<GameManager>();
+        if(script.gameOver){
+            Time.timeScale = 0; 
+             gamePanel.SetActive(false);
+             gameOverPanel.SetActive(true);
+        }
+
     }
 
     public void Play(){

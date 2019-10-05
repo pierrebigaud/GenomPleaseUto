@@ -473,6 +473,7 @@ MonoBehaviour:
   gamePanel: {fileID: 291546697}
   pausePanel: {fileID: 1598450049}
   gameOverPanel: {fileID: 1149224737}
+  _GameManager: {fileID: 806893954}
 --- !u!82 &473706595
 AudioSource:
   m_ObjectHideFlags: 0
@@ -816,8 +817,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   slider: {fileID: 1805019842}
   isGameInPause: 0
+  gameOver: 0
   fTimeInvestigation: 5
   fTimeInvestigationMax: 10
+  score: 0
   fImmunityfCurrent: 0
   fImmunityBegin: 0
   fImmunityLimite: 20
@@ -1186,7 +1189,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.9951434, g: 0, b: 1, a: 0.392}
+  m_Color: {r: 0.9951434, g: 0, b: 1, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
