@@ -35,15 +35,19 @@ public class GameManager : MonoBehaviour
 
     // cell to be examined
     public CelluleBehaviour cellToExam;
+    public GameObject tentacule;
+    public Text timer;
 
     private void Start(){
         slider.maxValue = fImmunityLimite;
+        timer.text = fTimeInvestigation + "";
     }
 
     // test of the cell
     public void TestInterrogation(bool isDestroy)
     {
-
+        tentacule.GetComponent<Animator>().ResetTrigger("pushButton");
+        tentacule.GetComponent<Animator>().SetTrigger("pushButton");
         /// GOOD RESPONSE !----------
         /// if you destroy a bad cell
         if (cellToExam.isBad && isDestroy)
