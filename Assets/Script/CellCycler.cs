@@ -13,12 +13,12 @@ public class CellCycler : MonoBehaviour
     private int cellId = 6;
     //the following properties contains the coordinates of each
     //cell position -> [coordX, coordy, scaleX, scaleY]
-    private float[] pos0 = { -6.3f, 3.4f, 27f, 21f };
-    private float[] pos1 = { -6.26f, 2.3f, 27f, 21f };
-    private float[] pos2 = { -5.1f, -0.9f, 27f, 21f };
-    private float[] pos3 = { -3.5f, -1.4f, 27f, 21f };
-    private float[] pos4 = { -1.5f, -1.3f, 27f, 21f };
-    private float[] pos5 = { 1.5f, -.8f, 27f, 21f };
+    private float[] pos0 = { -6.3f, 3.2f, 27f, 21f };
+    private float[] pos1 = { -6.26f, 2.1f, 27f, 21f };
+    private float[] pos2 = { -5.1f, -0.0f, 27f, 21f };
+    private float[] pos3 = { -3.5f, -0.5f, 27f, 21f };
+    private float[] pos4 = { -1.5f, -0.6f, 27f, 21f };
+    private float[] pos5 = { 1.5f, 0.7f, 27f, 21f };
 
     AudioSource audioSource;
     public AudioClip badCellDestroy;
