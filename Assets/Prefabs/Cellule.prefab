@@ -236,7 +236,7 @@ MonoBehaviour:
   - {fileID: 21300000, guid: f268cc844932eca48bb87e7c463b731b, type: 3}
   - {fileID: 21300000, guid: c042e0bbb5407e94b902764c59d199a0, type: 3}
   - {fileID: 21300000, guid: 4e5d3219695f7ab40a0f1cc8abc41cc1, type: 3}
-  probability: 100
+  probability: 50
   body: {fileID: 5903591535659653927}
   core: {fileID: 5903591537084176340}
   eyebrow: {fileID: 5903591537294613261}
