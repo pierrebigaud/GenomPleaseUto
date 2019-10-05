@@ -79,8 +79,8 @@ public class GameManager : MonoBehaviour
 
     private void FixedUpdate()
     {
+        slider.GetComponentInChildren<Image>().color = new Color(Mathf.Clamp((1 - fImmunityfCurrent / fImmunityLimite), 0, 1), 0, 0.5f,Mathf.Clamp((fImmunityfCurrent / fImmunityLimite), 0, 1));
         slider.value = fImmunityfCurrent;
-        Debug.Log(fImmunityfCurrent);
         //if not in pause
         if (!isGameInPause)
         {
