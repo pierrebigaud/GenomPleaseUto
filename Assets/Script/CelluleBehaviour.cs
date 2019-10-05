@@ -18,10 +18,12 @@ public class CelluleBehaviour : MonoBehaviour
     public GameObject mouth;
     public GameObject shit;
     private GameObject virus;
+    private GameObject genome;
 
     public bool hasLeft = false;
     public bool isBad = false;
     public bool isRejected = false;
+    public bool hasWrongGenome = false;
     // Start is called before the first frame update
     void Start()
     {
