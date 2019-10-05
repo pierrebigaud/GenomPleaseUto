@@ -34,12 +34,12 @@ public class CellCycler : MonoBehaviour
 
     void Update()
     {
-        
+
     }
 
     //Position the 5 cells in the GUI on startup
     public IEnumerator initCellList()
-    {        
+    {
         cells[0] = Instantiate(cellObject, new Vector3(pos0[0], pos0[1], 0), Quaternion.identity);
         cells[0].transform.name = "Cell No 0";
         yield return new WaitForSeconds(0.1f);
