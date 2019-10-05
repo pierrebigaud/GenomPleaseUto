@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class CelluleBehaviour : MonoBehaviour
 {
+    public GameObject systemManager;
+    private GlobalVariables gv;
+
     public List<Sprite> bodies;
     public List<Sprite> cores;
     public List<Sprite> eyebrows;
@@ -18,15 +21,18 @@ public class CelluleBehaviour : MonoBehaviour
     public GameObject mouth;
     public GameObject shit;
     private GameObject virus;
-    private GameObject genome;
+    public GameObject genome;
 
     public bool hasLeft = false;
     public bool isBad = false;
     public bool isRejected = false;
     public bool hasWrongGenome = false;
+
     // Start is called before the first frame update
     void Start()
     {
+        systemManager = GameObject.FindGameObjectWithTag("SysManager");
+        gv = systemManager.GetComponentInChildren<GlobalVariables>();
         //attribue un des randoms prefab de la liste au caracteristiques de la cellule
         this.core.GetComponent<SpriteRenderer>().sprite = cores[UnityEngine.Random.Range(0, cores.Count)];
         this.eyebrow.GetComponent<SpriteRenderer>().sprite = eyebrows[UnityEngine.Random.Range(0, eyebrows.Count)];
@@ -42,8 +48,15 @@ public class CelluleBehaviour : MonoBehaviour
         if (isBad)
         {
             this.virus = viruses[UnityEngine.Random.Range(0, viruses.Count)];
-            this.virus.SetActive(true);
+            this.virus.SetActive(true);            
+            this.genome.GetComponent<SpriteRenderer>().sprite = gv.goodGenomes[UnityEngine.Random.Range(0, gv.goodGenomes.Count)];
+            this.genome.SetActive(true);
         }
+        else
+        {
+            this.genome.GetComponent<SpriteRenderer>().sprite = gv.wrongGenome;
+        }
+        //this.genome.GetComponent<SpriteRenderer>().enabled = false;
     }
 
     // Update is called once per frame
