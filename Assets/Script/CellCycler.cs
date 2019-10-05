@@ -13,12 +13,13 @@ public class CellCycler : MonoBehaviour
     private int cellId = 6;
     //the following properties contains the coordinates of each
     //cell position -> [coordX, coordy, scaleX, scaleY]
-    private float[] pos0 = { -8.0f, 2.0f, 27f, 21f };
-    private float[] pos1 = { -7.0f, 1.5f, 27f, 21f };
-    private float[] pos2 = { -6.0f, 1.0f, 27f, 21f };
-    private float[] pos3 = { -4.5f, 0.5f, 27f, 21f };
-    private float[] pos4 = { -3.0f, 0.0f, 27f, 21f };
-    private float[] pos5 = { -0.0f, 0.0f, 27f, 21f };
+    private float[] pos0 = { -6.3f, 3.4f, 27f, 21f };
+    private float[] pos1 = { -6.26f, 2.3f, 27f, 21f };
+    private float[] pos2 = { -5.1f, -0.9f, 27f, 21f };
+    private float[] pos3 = { -3.5f, -1.4f, 27f, 21f };
+    private float[] pos4 = { -1.5f, -1.3f, 27f, 21f };
+    private float[] pos5 = { 1.5f, -.8f, 27f, 21f };
+
     AudioSource audioSource;
     public AudioClip badCellDestroy;
     public AudioClip goodCellDestroy;
@@ -101,10 +102,11 @@ public class CellCycler : MonoBehaviour
     public void depart(GameObject cell)
     {
         cell.transform.DOScale(0.5f,1f);
-        cell.GetComponent<Animator>().SetBool("isMoving", true);
+        cell.transform.GetComponent<Animator>().SetBool("isMoving", true);
+        cell.transform.DOBlendableMoveBy(new Vector3(0, 4, 0), 1);
+        cell.transform.DOBlendableMoveBy(new Vector3(6, 0, 0), 1f).SetLoops(3, LoopType.Yoyo);
         if (cell.GetComponentInChildren<CelluleBehaviour>().isRejected)
         {
-            cell.transform.DOMove(new Vector3(10, 0, 0), 1); //move to killing zone
             //TODO - Do cell killing animation
             if (cell.GetComponentInChildren<CelluleBehaviour>().isBad)
             {
@@ -119,7 +121,6 @@ public class CellCycler : MonoBehaviour
         }
         else
         {
-            cell.transform.DOMove(new Vector3(10, 0, 0), 1); //move out of screen
             if (cell.GetComponentInChildren<CelluleBehaviour>().isBad)
             {
                 //TODO - negative animation
