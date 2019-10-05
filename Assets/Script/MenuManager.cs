@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class MenuManager : MonoBehaviour
 {
@@ -10,10 +11,10 @@ public class MenuManager : MonoBehaviour
     public GameObject gamePanel;
     public GameObject pausePanel;
     public GameObject gameOverPanel;
+    public GameObject _GameManager;
+    private GameManager script;
 
     private AudioSource audioSource;
-
-    private bool isRunning = false;
 
     // Start is called before the first frame update
     void Start()
@@ -29,6 +30,13 @@ public class MenuManager : MonoBehaviour
        if(Input.GetKeyDown(KeyCode.Escape)){
           Pause();
        }
+       script = _GameManager.GetComponent<GameManager>();
+        if(script.gameOver){
+            Time.timeScale = 0; 
+             gamePanel.SetActive(false);
+             gameOverPanel.SetActive(true);
+        }
+
     }
 
     public void Play(){
