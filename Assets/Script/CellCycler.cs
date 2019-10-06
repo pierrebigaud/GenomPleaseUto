@@ -50,11 +50,11 @@ public class CellCycler : MonoBehaviour
         cells[1].transform.name = "Cell No 1";
         yield return new WaitForSeconds(0.1f);
         cells[2] = Instantiate(cellObject, new Vector3(pos2[0], pos2[1], 0), Quaternion.identity);
-         cells[2].transform.localScale = new Vector3(.6f, .6f, 1f);
+        cells[2].transform.localScale = new Vector3(.6f, .6f, 1f);
         cells[2].transform.name = "Cell No 2";
         yield return new WaitForSeconds(0.1f);
         cells[3] = Instantiate(cellObject, new Vector3(pos3[0], pos3[1], 0), Quaternion.identity);
-         cells[3].transform.localScale = new Vector3(.7f, .7f, 1f);
+        cells[3].transform.localScale = new Vector3(.7f, .7f, 1f);
         cells[3].transform.name = "Cell No 3";
         yield return new WaitForSeconds(0.1f);
         cells[4] = Instantiate(cellObject, new Vector3(pos4[0], pos4[1], 0), Quaternion.identity);
@@ -62,8 +62,11 @@ public class CellCycler : MonoBehaviour
         cells[4].transform.name = "Cell No 4";
         yield return new WaitForSeconds(0.1f);
         cells[5] = Instantiate(cellObject, new Vector3(pos5[0], pos5[1], 0), Quaternion.identity);
-         cells[5].transform.localScale = new Vector3(1.5f, 1.5f, 1f);
+        cells[5].transform.localScale = new Vector3(1.5f, 1.5f, 1f);
         cells[5].transform.name = "Cell No 5";
+        yield return new WaitForSeconds(0.1f);
+        cells[5].GetComponentInChildren<CelluleBehaviour>().genome.SetActive(true);        
+
     }
 
     //Cycle the cells on the GUI and in the list and adds a new one
@@ -96,15 +99,17 @@ public class CellCycler : MonoBehaviour
         cells[0] = Instantiate(cellObject, new Vector3(pos0[0], pos0[1], 0), Quaternion.identity);
         cells[0].transform.localScale = new Vector3(.4f, .4f, 1f);
         cells[0].transform.name = "Cell No " + cellId++;
+        cells[5].GetComponentInChildren<CelluleBehaviour>().genome.SetActive(true);
     }
 
     //Send the judge cell to its fate
     public void depart(GameObject cell)
     {
-        cell.transform.DOScale(0.8f,1f);
+        cell.GetComponentInChildren<CelluleBehaviour>().genome.SetActive(false);
+        cell.transform.DOScale(0.5f, 1f);
         cell.transform.GetComponent<Animator>().SetBool("isMoving", true);
-        cell.transform.DOMove(new Vector3(10, 0, 0), 2f);
-
+        cell.transform.DOBlendableMoveBy(new Vector3(4.5f, -1.5f, 0), 0.5f);
+        cell.transform.DOBlendableMoveBy(new Vector3(0, 4.5f, 0), 1.2f);
         if (cell.GetComponentInChildren<CelluleBehaviour>().isRejected)
         {
             //TODO - Do cell killing animation
