@@ -58,31 +58,34 @@ public class LevelManager : MonoBehaviour
         if (days.Length<=0)
         {
             index = 0;
-            SceneManager.LoadScene(0);
+            SceneManager.LoadScene("SceneLivio");
         }
-        // if we reached the last levels
-        else if (nbrDays>=days.Length)
-        {
-            index = days.Length;
-        }
-        // move to nextLevel
-        else
-        {
-            index = nbrDays;
-            GameChanger.fImmunityfCurrent -= fImmunityGain;
-            if (GameChanger.fImmunityfCurrent<0)
+        else{
+            // if we reached the last levels
+            if (nbrDays>=days.Length)
             {
-                GameChanger.fImmunityfCurrent = 0;
+                index = days.Length;
             }
+            // move to nextLevel
+            else
+            {
+                index = nbrDays;
+                GameChanger.fImmunityfCurrent -= fImmunityGain;
+                if (GameChanger.fImmunityfCurrent<0)
+                {
+                    GameChanger.fImmunityfCurrent = 0;
+                }
+            }
+            //change value game manager
+            GameChanger.fTimeInvestigation = days[index].fTimeInvestigationLevel;
+            GameChanger.fTimeDay = days[index].fTimeDaysLevel;
+            GameChanger.fMistakeTime = days[index].fMistakeTime;
+            GameChanger.fMistakeGoodCellDestroy = days[index].fMistakeGoodDestroy;
+            GameChanger.fMistakeBadCellPass = days[index].fMistakeBadLetPass;
+            
+            // change Cell
+            ModifCellCycler.cellObject= days[index].gEmptycellule;
         }
-        //change value game manager
-        GameChanger.fTimeInvestigation = days[index].fTimeInvestigationLevel;
-        GameChanger.fTimeDay = days[index].fTimeDaysLevel;
-        GameChanger.fMistakeTime = days[index].fMistakeTime;
-        GameChanger.fMistakeGoodCellDestroy = days[index].fMistakeGoodDestroy;
-        GameChanger.fMistakeBadCellPass = days[index].fMistakeBadLetPass;
         
-        // change Cell
-        ModifCellCycler.cellObject= days[index].gEmptycellule;
     }
 }

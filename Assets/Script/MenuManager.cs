@@ -16,7 +16,7 @@ public class MenuManager : MonoBehaviour
     private GameManager script;
 
     private AudioSource audioSource;
-
+    private bool playAudio = true;
 
     // Start is called before the first frame update
     void Start()
@@ -41,11 +41,14 @@ public class MenuManager : MonoBehaviour
        script = _GameManager.GetComponent<GameManager>();
         if(script.gameOver){
             gamePanel.SetActive(false);
-            
+            if(playAudio){
+                audioSource.clip = null;
+                audioSource.PlayOneShot(gameOverTheme);
+                playAudio = false;
+            }
+           
             StartCoroutine(ReturnTitleAfterTime());
             gameOverPanel.SetActive(true);
-            audioSource.clip = gameOverTheme;
-            audioSource.Play();
         }
 
     }
