@@ -1102,7 +1102,7 @@ PrefabInstance:
     - target: {fileID: 964972095763262615, guid: c89e123043d058d4d840b9eeb95e33de,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4442216671720143128, guid: c89e123043d058d4d840b9eeb95e33de,
         type: 3}
@@ -1149,6 +1149,12 @@ PrefabInstance:
       propertyPath: m_SizeDelta.x
       value: -1227.4
       objectReference: {fileID: 0}
+    - target: {fileID: 964972095763262612, guid: c89e123043d058d4d840b9eeb95e33de,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: d9803d48202c03643a8fa0f968dbf23b,
+        type: 3}
     - target: {fileID: 2339025229572623562, guid: c89e123043d058d4d840b9eeb95e33de,
         type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -1935,7 +1941,7 @@ PrefabInstance:
     - target: {fileID: 3953670752224422370, guid: be276e5c446d04247966038105608974,
         type: 3}
       propertyPath: fTimeDay
-      value: 10
+      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 7733812971286500769, guid: be276e5c446d04247966038105608974,
         type: 3}
