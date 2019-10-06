@@ -58,7 +58,15 @@ public class GameManager : MonoBehaviour
     public Button destroyBtn;
     public Button okBtn;
 
+    //audio
+    AudioSource audioSource;
+    public AudioClip pressButton;
+    public AudioClip goodCellAudio;
+    public AudioClip badCellAudio;
+    public AudioClip tooSlowAudio;
+
     private void Start() {
+        audioSource = GetComponent<AudioSource>();
         slider.maxValue = fImmunityLimite;
         days = GameObject.FindGameObjectWithTag("days").GetComponent<LevelManager>();
         days.GameChanger = this;
@@ -68,6 +76,7 @@ public class GameManager : MonoBehaviour
     // test of the cell
     public void TestInterrogation(bool isDestroy)
     {
+        audioSource.PlayOneShot(pressButton, 1);
         destroyBtn.GetComponent<Button>().interactable = false;
         okBtn.GetComponent<Button>().interactable = false;
         StartCoroutine(buttonReactivate());
@@ -93,7 +102,7 @@ public class GameManager : MonoBehaviour
         {
             cellToExam.isRejected = true;
             fImmunityfCurrent += fMistakeGoodCellDestroy;
-            StartCoroutine(textAppear(goodCell));
+            StartCoroutine(textAppear(goodCell, goodCellAudio));
 
         }
         // if you pass a bad cell
@@ -101,7 +110,7 @@ public class GameManager : MonoBehaviour
         {
             fImmunityfCurrent += fMistakeBadCellPass;
             cellToExam.isRejected = false;
-            StartCoroutine(textAppear(badCell));
+            StartCoroutine(textAppear(badCell, badCellAudio));
         }
         
         // base action when test , do a cell cycle and reset the time
@@ -143,7 +152,7 @@ public class GameManager : MonoBehaviour
                 // resetTime and add mistake to immunity
                 fTimeInvestigation = fTimeInvestigationMax;
                 fImmunityfCurrent += fMistakeTime;
-                StartCoroutine(textAppear(tooSlow));
+                StartCoroutine(textAppear(tooSlow, tooSlowAudio));
             }
 
             // soustract time
@@ -169,7 +178,8 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    IEnumerator textAppear(GameObject text) {
+    IEnumerator textAppear(GameObject text, AudioClip audio) {
+        audioSource.PlayOneShot(audio, 1);
         text.SetActive(true);
         yield return new WaitForSeconds(2);
         text.SetActive(false);
