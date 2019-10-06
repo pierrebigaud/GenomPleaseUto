@@ -30,8 +30,12 @@ public class LevelManager : MonoBehaviour
         public float fMistakeBadLetPass;
 
         public GameObject gEmptycellule;
+
+          
     }
 
+    public AudioClip nextDay;
+    private AudioSource audioSource;
     //number days 
     public int nbrDays;
 
@@ -46,10 +50,19 @@ public class LevelManager : MonoBehaviour
 
     // GameManager in scene
     public GameManager GameChanger;
+    public GameObject red;
 
+    void Start()
+    {
+        audioSource = GetComponent<AudioSource>();
+    }
+ 
     //the next method has to change level and reinitilize the gameObject with new value
     public void NextLevel()
     {
+        audioSource.PlayOneShot(nextDay);
+        red.SetActive(true);
+        StartCoroutine(closeRed());
         // we create an index who can be used to generate the next level (the nbr days is used to show the number of days)
         int index;
         nbrDays++;
@@ -57,7 +70,6 @@ public class LevelManager : MonoBehaviour
         // if days is not implemented properly
         if (days.Length<=0)
         {
-            Debug.Log("reboot");
             index = 0;
             SceneManager.LoadScene("Scene Gwen");
         }
@@ -90,5 +102,10 @@ public class LevelManager : MonoBehaviour
             ModifCellCycler.cellObject= days[index].gEmptycellule;
         }
         
+    }
+
+    IEnumerator closeRed(){
+        yield return new WaitForSeconds(1.5f);
+        red.SetActive(false);
     }
 }
