@@ -1,8 +1,9 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
-public class NiveauManager : MonoBehaviour
+public class LevelManager : MonoBehaviour
 {
     /// <summary>
     /// this script has the function of modyfying the difficulty of the game throughout days
@@ -46,20 +47,25 @@ public class NiveauManager : MonoBehaviour
     // GameManager in scene
     public GameManager GameChanger;
 
-    public void Start()
-    {
-        
-    }
-
     //the next method has to change level and reinitilize the gameObject with new value
     public void NextLevel()
     {
+        // we create an index who can be used to generate the next level (the nbr days is used to show the number of days)
         int index;
         nbrDays++;
-        if (nbrDays>=days.Length)
+
+        // if days is not implemented properly
+        if (days.Length<=0)
+        {
+            index = 0;
+            SceneManager.LoadScene(0);
+        }
+        // if we reached the last levels
+        else if (nbrDays>=days.Length)
         {
             index = days.Length;
         }
+        // move to nextLevel
         else
         {
             index = nbrDays;
@@ -69,8 +75,6 @@ public class NiveauManager : MonoBehaviour
                 GameChanger.fImmunityfCurrent = 0;
             }
         }
-        ModifCellCycler = GameChanger.Cells;
-
         //change value game manager
         GameChanger.fTimeInvestigation = days[index].fTimeInvestigationLevel;
         GameChanger.fTimeDay = days[index].fTimeDaysLevel;
@@ -78,8 +82,7 @@ public class NiveauManager : MonoBehaviour
         GameChanger.fMistakeGoodCellDestroy = days[index].fMistakeGoodDestroy;
         GameChanger.fMistakeBadCellPass = days[index].fMistakeBadLetPass;
         
+        // change Cell
         ModifCellCycler.cellObject= days[index].gEmptycellule;
-
-        GameChanger.ReloadGame();
     }
 }
