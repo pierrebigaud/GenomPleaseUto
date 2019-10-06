@@ -49,11 +49,11 @@ public class CelluleBehaviour : MonoBehaviour
         {
             this.virus = viruses[UnityEngine.Random.Range(0, viruses.Count)];
             this.virus.SetActive(true);
-            this.genome.GetComponent<SpriteRenderer>().sprite = gv.goodGenomes[UnityEngine.Random.Range(0, gv.goodGenomes.Count)];            
+            this.genome.GetComponent<SpriteRenderer>().sprite = gv.wrongGenome;
         }
         else
         {
-            this.genome.GetComponent<SpriteRenderer>().sprite = gv.wrongGenome;
+            this.genome.GetComponent<SpriteRenderer>().sprite = gv.goodGenomes[UnityEngine.Random.Range(0, gv.goodGenomes.Count)]; 
         }        
         this.genome.SetActive(false);        
     }

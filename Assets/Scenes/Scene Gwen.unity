@@ -433,6 +433,30 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 1554700477283738085}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1771630300 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4856971763366689974, guid: c89e123043d058d4d840b9eeb95e33de,
+    type: 3}
+  m_PrefabInstance: {fileID: 1554700477283738085}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1865074538 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1048378199347406163, guid: ac6823c476b8d73488f54d5720e29c18,
+    type: 3}
+  m_PrefabInstance: {fileID: 6836886887820133684}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e4ccccdaa641c2d46bcc4ca28bab7fe6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1554700477283738085
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -750,6 +774,92 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.x
       value: -5
       objectReference: {fileID: 0}
+    - target: {fileID: 2339025230019699859, guid: c89e123043d058d4d840b9eeb95e33de,
+        type: 3}
+      propertyPath: explode
+      value: 
+      objectReference: {fileID: 21300000, guid: 42f93118dcbfb1f488c38286bd7dad3d,
+        type: 3}
+    - target: {fileID: 2339025229787491942, guid: c89e123043d058d4d840b9eeb95e33de,
+        type: 3}
+      propertyPath: genomeTemplateList.Array.size
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2339025229787491942, guid: c89e123043d058d4d840b9eeb95e33de,
+        type: 3}
+      propertyPath: goodGenomes.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2339025229787491942, guid: c89e123043d058d4d840b9eeb95e33de,
+        type: 3}
+      propertyPath: genomeList.Array.size
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2339025229787491942, guid: c89e123043d058d4d840b9eeb95e33de,
+        type: 3}
+      propertyPath: genomeTemplateList.Array.data[0]
+      value: 
+      objectReference: {fileID: 21300000, guid: bdb36591c7282b743887fa056b322e96,
+        type: 3}
+    - target: {fileID: 2339025229787491942, guid: c89e123043d058d4d840b9eeb95e33de,
+        type: 3}
+      propertyPath: genomeTemplateList.Array.data[1]
+      value: 
+      objectReference: {fileID: 21300000, guid: 2231bb039d823c3488370422967d47b6,
+        type: 3}
+    - target: {fileID: 2339025229787491942, guid: c89e123043d058d4d840b9eeb95e33de,
+        type: 3}
+      propertyPath: genomeTemplateList.Array.data[2]
+      value: 
+      objectReference: {fileID: 21300000, guid: 178bc930c2af2ac41a3336cebd0a9f8e,
+        type: 3}
+    - target: {fileID: 2339025229787491942, guid: c89e123043d058d4d840b9eeb95e33de,
+        type: 3}
+      propertyPath: genomeTemplateList.Array.data[3]
+      value: 
+      objectReference: {fileID: 21300000, guid: a980cb542c9e89c40b29cbaa58498f8a,
+        type: 3}
+    - target: {fileID: 2339025229787491942, guid: c89e123043d058d4d840b9eeb95e33de,
+        type: 3}
+      propertyPath: genomeTemplateList.Array.data[4]
+      value: 
+      objectReference: {fileID: 21300000, guid: 9db2ecaf7bfe0274ea522591e9f34e06,
+        type: 3}
+    - target: {fileID: 2339025229787491942, guid: c89e123043d058d4d840b9eeb95e33de,
+        type: 3}
+      propertyPath: infoBoard
+      value: 
+      objectReference: {fileID: 1771630300}
+    - target: {fileID: 2339025229787491942, guid: c89e123043d058d4d840b9eeb95e33de,
+        type: 3}
+      propertyPath: genomeList.Array.data[0]
+      value: 
+      objectReference: {fileID: 21300000, guid: 56876eff23609394f8c8a975ee4d01f3,
+        type: 3}
+    - target: {fileID: 2339025229787491942, guid: c89e123043d058d4d840b9eeb95e33de,
+        type: 3}
+      propertyPath: genomeList.Array.data[1]
+      value: 
+      objectReference: {fileID: 21300000, guid: 188700e711a59bd4cafbce396e1bc59d,
+        type: 3}
+    - target: {fileID: 2339025229787491942, guid: c89e123043d058d4d840b9eeb95e33de,
+        type: 3}
+      propertyPath: genomeList.Array.data[2]
+      value: 
+      objectReference: {fileID: 21300000, guid: 6000b2c500d00f340a146748fd0692a9,
+        type: 3}
+    - target: {fileID: 2339025229787491942, guid: c89e123043d058d4d840b9eeb95e33de,
+        type: 3}
+      propertyPath: genomeList.Array.data[3]
+      value: 
+      objectReference: {fileID: 21300000, guid: 0aefba68b3ad3334cb8e0b392a96d377,
+        type: 3}
+    - target: {fileID: 2339025229787491942, guid: c89e123043d058d4d840b9eeb95e33de,
+        type: 3}
+      propertyPath: genomeList.Array.data[4]
+      value: 
+      objectReference: {fileID: 21300000, guid: e90635f367d4a1742bdd65444012b070,
+        type: 3}
     - target: {fileID: 2339025230019699863, guid: c89e123043d058d4d840b9eeb95e33de,
         type: 3}
       propertyPath: m_IsActive
@@ -768,11 +878,6 @@ PrefabInstance:
     - target: {fileID: 2339025230035556056, guid: c89e123043d058d4d840b9eeb95e33de,
         type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2339025230019699858, guid: c89e123043d058d4d840b9eeb95e33de,
-        type: 3}
-      propertyPath: m_Direction
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2339025229752918713, guid: c89e123043d058d4d840b9eeb95e33de,
@@ -846,36 +951,6 @@ PrefabInstance:
       propertyPath: tentacule
       value: 
       objectReference: {fileID: 319870223}
-    - target: {fileID: 2339025230035556057, guid: c89e123043d058d4d840b9eeb95e33de,
-        type: 3}
-      propertyPath: m_Color.r
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2339025230035556057, guid: c89e123043d058d4d840b9eeb95e33de,
-        type: 3}
-      propertyPath: m_Color.g
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2339025230035556057, guid: c89e123043d058d4d840b9eeb95e33de,
-        type: 3}
-      propertyPath: m_Color.b
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2339025228713698211, guid: c89e123043d058d4d840b9eeb95e33de,
-        type: 3}
-      propertyPath: m_Color.r
-      value: 0.9528302
-      objectReference: {fileID: 0}
-    - target: {fileID: 2339025228713698211, guid: c89e123043d058d4d840b9eeb95e33de,
-        type: 3}
-      propertyPath: m_Color.g
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2339025228713698211, guid: c89e123043d058d4d840b9eeb95e33de,
-        type: 3}
-      propertyPath: m_Color.b
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 2146253651556534956, guid: c89e123043d058d4d840b9eeb95e33de,
         type: 3}
       propertyPath: m_RootOrder
@@ -1177,8 +1252,8 @@ PrefabInstance:
       objectReference: {fileID: 1569399564}
     - target: {fileID: 3953670752224422370, guid: be276e5c446d04247966038105608974,
         type: 3}
-      propertyPath: fTimeDay
-      value: 10
-      objectReference: {fileID: 0}
+      propertyPath: days
+      value: 
+      objectReference: {fileID: 1865074538}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: be276e5c446d04247966038105608974, type: 3}

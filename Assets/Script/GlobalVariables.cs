@@ -1,23 +1,36 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class GlobalVariables : MonoBehaviour
 {
+    public Sprite[] genomeList;
+    public Sprite[] genomeTemplateList;
     public List<Sprite> goodGenomes;
     public Sprite wrongGenome;
+    public Image infoBoard;
 
     public void Start()
     {
-        //select a wrong genome in the list
-        int nbGenome = Random.Range(0, goodGenomes.Count);
-        wrongGenome = goodGenomes[nbGenome];
-        goodGenomes.RemoveAt(nbGenome);
+        initGenomes();
     }
 
-    // Update is called once per frame
-    void Update()
+    public void initGenomes()
     {
-        
+        int nbGenome = Random.Range(0, genomeList.Length);
+        Debug.Log(nbGenome);
+        Debug.Log(genomeList);
+
+        wrongGenome = genomeList[nbGenome];
+        infoBoard.GetComponentInChildren<Image>().sprite = genomeTemplateList[nbGenome];
+
+        foreach (Sprite sprite in genomeList)
+        {
+            if (sprite != wrongGenome)
+            {
+                goodGenomes.Add(sprite);
+            }
+        }
     }
 }
