@@ -91,19 +91,19 @@ public class CellCycler : MonoBehaviour
 
     public IEnumerator moveCells(){
         yield return new WaitForSeconds(1);
-        cells[4].transform.DOMove(new Vector3(pos5[0], pos5[1], 0), 1);
+        cells[4].transform.DOMove(new Vector3(pos5[0], pos5[1], 0), 0.7f);
         cells[4].transform.localScale = new Vector3(1.5f, 1.5f, 1f);
         cells[5] = cells[4];
-        cells[3].transform.DOMove(new Vector3(pos4[0], pos4[1], 0), 1);
+        cells[3].transform.DOMove(new Vector3(pos4[0], pos4[1], 0), 0.7f);
         cells[3].transform.localScale = new Vector3(.8f, .8f, 1f);
         cells[4] = cells[3];
-        cells[2].transform.DOMove(new Vector3(pos3[0], pos3[1], 0), 1f);
+        cells[2].transform.DOMove(new Vector3(pos3[0], pos3[1], 0), 0.7f);
         cells[2].transform.localScale = new Vector3(.7f, .7f, 1f);
         cells[3] = cells[2];
-        cells[1].transform.DOMove(new Vector3(pos2[0], pos2[1], 0), 1);
+        cells[1].transform.DOMove(new Vector3(pos2[0], pos2[1], 0), 0.7f);
         cells[1].transform.localScale = new Vector3(.6f, .6f, 1f);
         cells[2] = cells[1];
-        cells[0].transform.DOMove(new Vector3(pos1[0], pos1[1], 0), 1);
+        cells[0].transform.DOMove(new Vector3(pos1[0], pos1[1], 0), 0.7f);
         cells[0].transform.localScale = new Vector3(.5f, .5f, 1f);
         cells[1] = cells[0];
     }

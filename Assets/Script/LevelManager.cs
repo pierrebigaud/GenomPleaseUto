@@ -77,13 +77,11 @@ public class LevelManager : MonoBehaviour
             // if we reached the last levels
             if (nbrDays>=days.Length)
             {
-                Debug.Log("last");
                 index = days.Length-1;
             }
             // move to nextLevel
             else
             {
-                Debug.Log("new");
                 index = nbrDays;
                 GameChanger.fImmunityfCurrent -= fImmunityGain;
                 if (GameChanger.fImmunityfCurrent<0)
