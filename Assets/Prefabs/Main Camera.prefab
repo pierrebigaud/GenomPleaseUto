@@ -99,9 +99,10 @@ MonoBehaviour:
   slider: {fileID: 0}
   isGameInPause: 0
   gameOver: 0
+  days: {fileID: 0}
   fTimeInvestigation: 5
   fTimeInvestigationMax: 5
-  fTimeDay: 0
+  fTimeDay: 10
   score: 0
   fImmunityfCurrent: 0
   fImmunityBegin: 0

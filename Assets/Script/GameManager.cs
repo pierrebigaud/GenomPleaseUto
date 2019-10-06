@@ -2,7 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-using UnityEngine.UI;
+using UnityEngine.UI; 
+using System;
 
 public class GameManager : MonoBehaviour
 {
@@ -45,7 +46,7 @@ public class GameManager : MonoBehaviour
     // cell to be examined
     public CelluleBehaviour cellToExam;
     public GameObject tentacule;
-    public Text timer;
+    public GameObject timer;
     public GameObject goodCell;
     public GameObject badCell;
     public GameObject tooSlow;
@@ -53,7 +54,6 @@ public class GameManager : MonoBehaviour
 
     private void Start() {
         slider.maxValue = fImmunityLimite;
-        timer.text = fTimeInvestigation + "";
         days = GameObject.FindGameObjectWithTag("days").GetComponent<LevelManager>();
         days.GameChanger = this;
         days.ModifCellCycler = Cells;
@@ -103,7 +103,8 @@ public class GameManager : MonoBehaviour
 
     private void FixedUpdate()
     {
-        slider.GetComponentInChildren<Image>().color = new Color(Mathf.Clamp((1 - fImmunityfCurrent / fImmunityLimite), 0, 1), 0, 0.5f, Mathf.Clamp((fImmunityfCurrent / fImmunityLimite), 0, 1));
+        timer.GetComponent<TextMesh>().text = Math.Round(fTimeDay, 2) + "";
+        slider.GetComponentInChildren<Image>().color = new Color(Mathf.Clamp((fImmunityfCurrent / fImmunityLimite), 0, 1), 1, 0.5f, Mathf.Clamp((1 - fImmunityfCurrent / fImmunityLimite), 1, 1));
         slider.value = fImmunityfCurrent;
         //if not in pause
         if (!isGameInPause || !gameOver)
