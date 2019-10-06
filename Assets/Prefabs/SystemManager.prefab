@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &2198348907461960062
+--- !u!1 &3708429714082666743
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,38 +8,43 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 2198348907461960061}
-  - component: {fileID: 2198348907461960060}
-  - component: {fileID: 2198348907461960058}
-  - component: {fileID: 2198348907461960063}
-  m_Layer: 0
+  - component: {fileID: 3708429714082666738}
+  - component: {fileID: 3708429714315956737}
+  - component: {fileID: 3708429714082666741}
+  - component: {fileID: 3708429714082666740}
+  m_Layer: 5
   m_Name: SystemManager
   m_TagString: SysManager
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &2198348907461960061
-Transform:
+--- !u!224 &3708429714082666738
+RectTransform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2198348907461960062}
+  m_GameObject: {fileID: 3708429714082666743}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0, y: -0, z: -148.07074}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2198348907461960060
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5192083, y: 0.5}
+  m_AnchoredPosition: {x: 42, y: -453}
+  m_SizeDelta: {x: 63, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &3708429714315956737
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2198348907461960062}
+  m_GameObject: {fileID: 3708429714082666743}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d6bf192f4f401b14590fd829e3fc0b6b, type: 3}
@@ -48,18 +53,18 @@ MonoBehaviour:
   cells: []
   cellObject: {fileID: 6108779162494853783, guid: f9a361930c583664a9ef0d5af338869e,
     type: 3}
-  delayBeforeDestroy: 1
-  badCellDestroy: {fileID: 8300000, guid: 3fac7438385a63a4597bb4fad1d12eba, type: 3}
-  goodCellDestroy: {fileID: 8300000, guid: cd7f65ea002199244aa4876aed53b86c, type: 3}
-  badCellPasses: {fileID: 8300000, guid: ee8813f9540411444a1413d30b3f0ce8, type: 3}
-  goodCellPasses: {fileID: 8300000, guid: b1f6a1f4b15ee2a4caa4d27558377b6c, type: 3}
---- !u!82 &2198348907461960058
+  delayBeforeDestroy: 0
+  badCellDestroy: {fileID: 8300000, guid: 15dc09c261af8614e8e393df3cf141ba, type: 3}
+  goodCellDestroy: {fileID: 8300000, guid: ce79df3ae6e14734a9a056001bebfbe0, type: 3}
+  badCellPasses: {fileID: 8300000, guid: 8428826389e896643933e73c4cfb58f1, type: 3}
+  goodCellPasses: {fileID: 8300000, guid: 78a49d1d98b0b3149925e56897ecb181, type: 3}
+--- !u!82 &3708429714082666741
 AudioSource:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2198348907461960062}
+  m_GameObject: {fileID: 3708429714082666743}
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
@@ -73,8 +78,8 @@ AudioSource:
   SpatializePostEffects: 0
   Priority: 128
   DopplerLevel: 1
-  MinDistance: 10.252085
-  MaxDistance: 10.252086
+  MinDistance: 1
+  MaxDistance: 500
   Pan2D: 0
   rolloffMode: 0
   BypassEffects: 0
@@ -149,20 +154,22 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &2198348907461960063
+--- !u!114 &3708429714082666740
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2198348907461960062}
+  m_GameObject: {fileID: 3708429714082666743}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4d42a255ead0b8347aa0191acd65f419, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   goodGenomes:
-  - {fileID: 21300000, guid: f0c39f2990d3fa649959078317a3779a, type: 3}
-  - {fileID: 21300000, guid: 4be6b66c2a040f04e896a28f4ed52645, type: 3}
-  - {fileID: 21300000, guid: 29210da6fe0e0a345af3b26b157a99fd, type: 3}
+  - {fileID: 21300000, guid: 56876eff23609394f8c8a975ee4d01f3, type: 3}
+  - {fileID: 21300000, guid: 188700e711a59bd4cafbce396e1bc59d, type: 3}
+  - {fileID: 21300000, guid: 6000b2c500d00f340a146748fd0692a9, type: 3}
+  - {fileID: 21300000, guid: 0aefba68b3ad3334cb8e0b392a96d377, type: 3}
+  - {fileID: 21300000, guid: e90635f367d4a1742bdd65444012b070, type: 3}
   wrongGenome: {fileID: 0}

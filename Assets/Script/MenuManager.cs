@@ -7,6 +7,7 @@ using UnityEngine.UI;
 public class MenuManager : MonoBehaviour
 {
     public AudioClip mainTheme;
+    public AudioClip gameOverTheme;
     public GameObject titlePanel;
     public GameObject gamePanel;
     public GameObject pausePanel;
@@ -33,8 +34,10 @@ public class MenuManager : MonoBehaviour
        script = _GameManager.GetComponent<GameManager>();
         if(script.gameOver){
             Time.timeScale = 0; 
-             gamePanel.SetActive(false);
-             gameOverPanel.SetActive(true);
+            gamePanel.SetActive(false);
+            gameOverPanel.SetActive(true);
+            audioSource.clip = gameOverTheme;
+            audioSource.Play();
         }
 
     }
@@ -42,6 +45,7 @@ public class MenuManager : MonoBehaviour
     public void Play(){
         titlePanel.SetActive(false);
         gamePanel.SetActive(true);
+        gameOverPanel.SetActive(false);
         Time.timeScale = 1;
         audioSource.clip = mainTheme;
         audioSource.Play();

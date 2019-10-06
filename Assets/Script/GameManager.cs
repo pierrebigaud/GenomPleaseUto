@@ -13,7 +13,7 @@ public class GameManager : MonoBehaviour
     /// True/false : examine if the choice is true or false
     ///
 
-    public Slider slider;         
+    public Slider slider;
     public bool isGameInPause, gameOver;
 
     // time comparing the investigation of the cell
@@ -37,7 +37,7 @@ public class GameManager : MonoBehaviour
     public float fMistakeBadCellPass;
 
     // List cells
-    public CellCycler Cells ;
+    public CellCycler Cells;
 
     // cell to be examined
     public CelluleBehaviour cellToExam;
@@ -48,7 +48,7 @@ public class GameManager : MonoBehaviour
     public GameObject tooSlow;
 
 
-    private void Start(){
+    private void Start() {
         slider.maxValue = fImmunityLimite;
         timer.text = fTimeInvestigation + "";
     }
@@ -97,7 +97,7 @@ public class GameManager : MonoBehaviour
 
     private void FixedUpdate()
     {
-        slider.GetComponentInChildren<Image>().color = new Color(Mathf.Clamp((1 - fImmunityfCurrent / fImmunityLimite), 0, 1), 0, 0.5f,Mathf.Clamp((fImmunityfCurrent / fImmunityLimite), 0, 1));
+        slider.GetComponentInChildren<Image>().color = new Color(Mathf.Clamp((1 - fImmunityfCurrent / fImmunityLimite), 0, 1), 0, 0.5f, Mathf.Clamp((fImmunityfCurrent / fImmunityLimite), 0, 1));
         slider.value = fImmunityfCurrent;
         //if not in pause
         if (!isGameInPause || !gameOver)
@@ -112,7 +112,8 @@ public class GameManager : MonoBehaviour
             }
             if (fImmunityfCurrent > fImmunityLimite)
             {
-                gameOver=true;
+                ReloadGame();
+                gameOver = true;
             }
 
             // if time is up
@@ -146,9 +147,14 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    IEnumerator textAppear(GameObject text){
+    IEnumerator textAppear(GameObject text) {
         text.SetActive(true);
         yield return new WaitForSeconds(2);
         text.SetActive(false);
+    }
+
+    public void ReloadGame()
+    {
+        fImmunityfCurrent = fImmunityBegin;
     }
 }
