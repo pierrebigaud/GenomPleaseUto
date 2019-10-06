@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI; 
 using System;
+using UnityEngine.EventSystems;
 
 public class GameManager : MonoBehaviour
 {
@@ -50,7 +51,12 @@ public class GameManager : MonoBehaviour
     public GameObject goodCell;
     public GameObject badCell;
     public GameObject tooSlow;
-
+    public Sprite imgDestroy;
+    public Sprite imgOk;
+    public Sprite imgDestroyDes;
+    public Sprite imgOkDes;
+    public Button destroyBtn;
+    public Button okBtn;
 
     private void Start() {
         slider.maxValue = fImmunityLimite;
@@ -62,6 +68,9 @@ public class GameManager : MonoBehaviour
     // test of the cell
     public void TestInterrogation(bool isDestroy)
     {
+        destroyBtn.GetComponent<Button>().interactable = false;
+        okBtn.GetComponent<Button>().interactable = false;
+        StartCoroutine(buttonReactivate());
         tentacule.GetComponent<Animator>().ResetTrigger("pushButton");
         tentacule.GetComponent<Animator>().SetTrigger("pushButton");
         /// GOOD RESPONSE !----------
@@ -94,13 +103,19 @@ public class GameManager : MonoBehaviour
             cellToExam.isRejected = false;
             StartCoroutine(textAppear(badCell));
         }
-
+        
         // base action when test , do a cell cycle and reset the time
         Cells.doCellCycle();
         cellToExam = Cells.cells[5].GetComponentInChildren<CelluleBehaviour>();
         fTimeInvestigation = fTimeInvestigationMax;
+        
     }
 
+    IEnumerator buttonReactivate (){
+        yield return new WaitForSeconds(2);
+        okBtn.GetComponent<Button>().interactable = true;
+        destroyBtn.GetComponent<Button>().interactable = true;
+    }
     private void FixedUpdate()
     {
         timer.GetComponent<TextMesh>().text = Math.Round(fTimeDay, 2) + "";
