@@ -714,7 +714,7 @@ MonoBehaviour:
     m_SelectOnDown: {fileID: 0}
     m_SelectOnLeft: {fileID: 0}
     m_SelectOnRight: {fileID: 0}
-  m_Transition: 1
+  m_Transition: 2
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
     m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
@@ -724,10 +724,11 @@ MonoBehaviour:
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
   m_SpriteState:
-    m_HighlightedSprite: {fileID: 0}
-    m_PressedSprite: {fileID: 0}
-    m_SelectedSprite: {fileID: 0}
-    m_DisabledSprite: {fileID: 0}
+    m_HighlightedSprite: {fileID: 21300000, guid: 4a3740035da4d8947b0bf37872a4e096,
+      type: 3}
+    m_PressedSprite: {fileID: 21300000, guid: 23f19d35ca511d049b1f10a7ed0faf18, type: 3}
+    m_SelectedSprite: {fileID: 21300000, guid: 4a3740035da4d8947b0bf37872a4e096, type: 3}
+    m_DisabledSprite: {fileID: 21300000, guid: 16ada0602205ed249bf2d087606c5b14, type: 3}
   m_AnimationTriggers:
     m_NormalTrigger: Normal
     m_HighlightedTrigger: Highlighted
@@ -739,24 +740,13 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 3953670752224422370, guid: be276e5c446d04247966038105608974,
+          type: 3}
         m_MethodName: TestInterrogation
         m_Mode: 6
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 1
-        m_CallState: 2
-      - m_Target: {fileID: 2339025229752918714}
-        m_MethodName: set_overrideSprite
-        m_Mode: 2
-        m_Arguments:
-          m_ObjectArgument: {fileID: 21300000, guid: 23f19d35ca511d049b1f10a7ed0faf18,
-            type: 3}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Sprite, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -1696,7 +1686,6 @@ GameObject:
   - component: {fileID: 2339025230563868501}
   - component: {fileID: 2339025230563868500}
   - component: {fileID: 2339025230563868491}
-  - component: {fileID: 2339025230563868490}
   m_Layer: 5
   m_Name: Pass
   m_TagString: Untagged
@@ -1777,7 +1766,7 @@ MonoBehaviour:
     m_SelectOnDown: {fileID: 0}
     m_SelectOnLeft: {fileID: 0}
     m_SelectOnRight: {fileID: 0}
-  m_Transition: 1
+  m_Transition: 2
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
     m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
@@ -1787,10 +1776,11 @@ MonoBehaviour:
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
   m_SpriteState:
-    m_HighlightedSprite: {fileID: 0}
-    m_PressedSprite: {fileID: 0}
-    m_SelectedSprite: {fileID: 0}
-    m_DisabledSprite: {fileID: 0}
+    m_HighlightedSprite: {fileID: 21300000, guid: e124b277676d2654d894b9c51deaf361,
+      type: 3}
+    m_PressedSprite: {fileID: 21300000, guid: a271fa79acafb8a4b80a841bf5d6c514, type: 3}
+    m_SelectedSprite: {fileID: 21300000, guid: e124b277676d2654d894b9c51deaf361, type: 3}
+    m_DisabledSprite: {fileID: 21300000, guid: 1ba2e6daab60b534988486c235d1ada2, type: 3}
   m_AnimationTriggers:
     m_NormalTrigger: Normal
     m_HighlightedTrigger: Highlighted
@@ -1802,19 +1792,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2339025230563868500}
-        m_MethodName: set_overrideSprite
-        m_Mode: 2
-        m_Arguments:
-          m_ObjectArgument: {fileID: 21300000, guid: a271fa79acafb8a4b80a841bf5d6c514,
-            type: 3}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Sprite, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 3953670752224422370, guid: be276e5c446d04247966038105608974,
+          type: 3}
         m_MethodName: TestInterrogation
         m_Mode: 6
         m_Arguments:
@@ -1825,51 +1804,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
---- !u!114 &2339025230563868490
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2339025230563868488}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Delegates:
-  - eventID: 0
-    callback:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 2339025230563868500}
-          m_MethodName: set_overrideSprite
-          m_Mode: 2
-          m_Arguments:
-            m_ObjectArgument: {fileID: 21300000, guid: e124b277676d2654d894b9c51deaf361,
-              type: 3}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Sprite, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
-  - eventID: 1
-    callback:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 2339025230563868500}
-          m_MethodName: set_overrideSprite
-          m_Mode: 2
-          m_Arguments:
-            m_ObjectArgument: {fileID: 21300000, guid: e535c008f02dee349b6791048e2e19ea,
-              type: 3}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Sprite, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
 --- !u!1 &2339025230611843164
 GameObject:
   m_ObjectHideFlags: 0
@@ -2208,15 +2142,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 35a53f198b192a149aaf7d1fcc67aa3b, type: 3}
---- !u!1 &964972095763262615 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 458797318120297921, guid: 35a53f198b192a149aaf7d1fcc67aa3b,
-    type: 3}
-  m_PrefabInstance: {fileID: 808885109910698326}
-  m_PrefabAsset: {fileID: 0}
 --- !u!224 &964972095763262610 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 458797318120297924, guid: 35a53f198b192a149aaf7d1fcc67aa3b,
+    type: 3}
+  m_PrefabInstance: {fileID: 808885109910698326}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &964972095763262615 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 458797318120297921, guid: 35a53f198b192a149aaf7d1fcc67aa3b,
     type: 3}
   m_PrefabInstance: {fileID: 808885109910698326}
   m_PrefabAsset: {fileID: 0}
@@ -2420,7 +2354,7 @@ PrefabInstance:
     - target: {fileID: 614085359660787056, guid: a5d14fd58d95ea54c9fd9a22a6599d5a,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -19.368835
+      value: -19.368896
       objectReference: {fileID: 0}
     - target: {fileID: 614085359660787056, guid: a5d14fd58d95ea54c9fd9a22a6599d5a,
         type: 3}
