@@ -11,12 +11,12 @@ public class MagnifyingGlassScript : MonoBehaviour
     private bool isOn = false;
     public GameObject tentacule;
 
-    public void useMagnifyingGlass()
+    public void useMagnifyingGlass(float speed=1)
     {
         if (isOn)
         {
-         
-            transform.DOMove(new Vector3(pos0[0], pos0[1], -6), 1);
+            transform.DOMove(new Vector3(pos0[0], pos0[1], -6), speed);
+            
             isOn = false;
         }
         else
@@ -24,8 +24,10 @@ public class MagnifyingGlassScript : MonoBehaviour
             tentacule.GetComponent<Animator>().ResetTrigger("pushButton");
             tentacule.GetComponent<Animator>().SetTrigger("pushButton");
             transform.DOMove(new Vector3(pos1[0], pos1[1], -6), 1);
+         
             isOn = true;
         }
     }
 
+  
 }
