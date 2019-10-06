@@ -121,7 +121,7 @@ public class GameManager : MonoBehaviour
     }
 
     IEnumerator buttonReactivate (){
-        yield return new WaitForSeconds(2);
+        yield return new WaitForSeconds(1);
         okBtn.GetComponent<Button>().interactable = true;
         destroyBtn.GetComponent<Button>().interactable = true;
     }
