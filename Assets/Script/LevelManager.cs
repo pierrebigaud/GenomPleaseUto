@@ -57,6 +57,7 @@ public class LevelManager : MonoBehaviour
         // if days is not implemented properly
         if (days.Length<=0)
         {
+            Debug.Log("reboot");
             index = 0;
             SceneManager.LoadScene("Scene Gwen");
         }
@@ -64,11 +65,13 @@ public class LevelManager : MonoBehaviour
             // if we reached the last levels
             if (nbrDays>=days.Length)
             {
-                index = days.Length;
+                Debug.Log("last");
+                index = days.Length-1;
             }
             // move to nextLevel
             else
             {
+                Debug.Log("new");
                 index = nbrDays;
                 GameChanger.fImmunityfCurrent -= fImmunityGain;
                 if (GameChanger.fImmunityfCurrent<0)
