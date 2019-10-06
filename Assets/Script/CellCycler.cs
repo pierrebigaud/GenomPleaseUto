@@ -66,7 +66,15 @@ public class CellCycler : MonoBehaviour
         cells[5].transform.name = "Cell No 5";
         yield return new WaitForSeconds(0.1f);
         cells[5].GetComponentInChildren<CelluleBehaviour>().genome.SetActive(true);        
+    }
 
+    public void resetCells()
+    {
+        foreach (GameObject cell in cells)
+        {
+            Destroy(cell.transform.gameObject);
+        }
+        initCellList();
     }
 
     //Cycle the cells on the GUI and in the list and adds a new one
