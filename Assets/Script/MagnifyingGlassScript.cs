@@ -14,12 +14,12 @@ public class MagnifyingGlassScript : MonoBehaviour
     {
         if (isOn)
         {
-            transform.DOMove(new Vector3(pos0[0], pos0[1], -2), 1);
+            transform.DOMove(new Vector3(pos0[0], pos0[1], -6), 1);
             isOn = false;
         }
         else
         {
-            transform.DOMove(new Vector3(pos1[0], pos1[1], -2), 1);
+            transform.DOMove(new Vector3(pos1[0], pos1[1], -6), 1);
             isOn = true;
         }
     }

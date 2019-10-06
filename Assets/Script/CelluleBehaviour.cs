@@ -48,15 +48,14 @@ public class CelluleBehaviour : MonoBehaviour
         if (isBad)
         {
             this.virus = viruses[UnityEngine.Random.Range(0, viruses.Count)];
-            this.virus.SetActive(true);            
-            this.genome.GetComponent<SpriteRenderer>().sprite = gv.goodGenomes[UnityEngine.Random.Range(0, gv.goodGenomes.Count)];
-            this.genome.SetActive(true);
+            this.virus.SetActive(true);
+            this.genome.GetComponent<SpriteRenderer>().sprite = gv.goodGenomes[UnityEngine.Random.Range(0, gv.goodGenomes.Count)];            
         }
         else
         {
             this.genome.GetComponent<SpriteRenderer>().sprite = gv.wrongGenome;
-        }
-        //this.genome.GetComponent<SpriteRenderer>().enabled = false;
+        }        
+        this.genome.SetActive(false);        
     }
 
     // Update is called once per frame
