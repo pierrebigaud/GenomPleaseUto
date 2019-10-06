@@ -93,7 +93,7 @@ public class MenuManager : MonoBehaviour
 
     public void ReturnTitle(){
         Time.timeScale = 0;
-        SceneManager.LoadScene("SceneLivio");
+        SceneManager.LoadScene("SceneGwen");
         pausePanel.SetActive(false);
     }
 
@@ -102,7 +102,7 @@ public class MenuManager : MonoBehaviour
         pausePanel.SetActive(false);
         gamePanel.SetActive(true);
         gameOverPanel.SetActive(false);
-        SceneManager.LoadScene("SceneLivio");
+        SceneManager.LoadScene("SceneGwen");
         Time.timeScale = 1;
     }
 

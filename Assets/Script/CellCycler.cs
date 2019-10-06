@@ -25,6 +25,7 @@ public class CellCycler : MonoBehaviour
     public AudioClip goodCellDestroy;
     public AudioClip badCellPasses;
     public AudioClip goodCellPasses;
+    public AudioClip destroySound;
     public Sprite explode;
 
     void Start()
@@ -172,6 +173,7 @@ public class CellCycler : MonoBehaviour
     {
         yield return new WaitForSeconds(0.2f);
         Destroy(lymph.transform.gameObject);
+        audioSource.PlayOneShot(destroySound, 1);
         for (int a = 0; a < cell.transform.GetChild(0).transform.childCount; a++)
             {
                  cell.transform.GetChild(0).transform.GetChild(a).gameObject.SetActive(false);
