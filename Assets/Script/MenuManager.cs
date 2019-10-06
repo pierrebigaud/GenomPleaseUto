@@ -17,6 +17,7 @@ public class MenuManager : MonoBehaviour
 
     private AudioSource audioSource;
 
+
     // Start is called before the first frame update
     void Start()
     {
@@ -28,9 +29,15 @@ public class MenuManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-       if(Input.GetKeyDown(KeyCode.Escape)){
-          Pause();
+       if(Input.GetKeyDown(KeyCode.Escape) ){
+           if(gamePanel.activeInHierarchy  == true){
+               Pause();
+            } else if(pausePanel.activeInHierarchy  == true){
+               ResumeGame();
+            } 
        }
+      
+     
        script = _GameManager.GetComponent<GameManager>();
         if(script.gameOver){
             gamePanel.SetActive(false);
@@ -66,7 +73,7 @@ public class MenuManager : MonoBehaviour
 
     public void ReturnTitle(){
         Time.timeScale = 0;
-        SceneManager.LoadScene("SceneGlass");
+        SceneManager.LoadScene("SceneLivio");
         pausePanel.SetActive(false);
     }
 
@@ -75,7 +82,7 @@ public class MenuManager : MonoBehaviour
         pausePanel.SetActive(false);
         gamePanel.SetActive(true);
         gameOverPanel.SetActive(false);
-        SceneManager.LoadScene("SceneGlass");
+        SceneManager.LoadScene("SceneLivio");
         Time.timeScale = 1;
     }
     public void QuitGame(){
