@@ -44,7 +44,28 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   nbrDays: 0
-  fImmunityGain: 0
-  days: []
+  fImmunityGain: 5
+  days:
+  - fTimeDaysLevel: 10
+    fTimeInvestigationLevel: 5
+    fMistakeTime: 1
+    fMistakeGoodDestroy: 1
+    fMistakeBadLetPass: 1
+    gEmptycellule: {fileID: 6108779162494853783, guid: f9a361930c583664a9ef0d5af338869e,
+      type: 3}
+  - fTimeDaysLevel: 10
+    fTimeInvestigationLevel: 6
+    fMistakeTime: 2
+    fMistakeGoodDestroy: 2
+    fMistakeBadLetPass: 2
+    gEmptycellule: {fileID: 6108779162494853783, guid: d1e66649ce4c2514c86c344a0159087e,
+      type: 3}
+  - fTimeDaysLevel: 10
+    fTimeInvestigationLevel: 6
+    fMistakeTime: 2
+    fMistakeGoodDestroy: 2
+    fMistakeBadLetPass: 2
+    gEmptycellule: {fileID: 6108779162494853783, guid: d8eac15bb0716e140873095168702516,
+      type: 3}
   ModifCellCycler: {fileID: 0}
   GameChanger: {fileID: 0}
