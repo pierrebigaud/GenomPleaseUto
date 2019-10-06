@@ -100,7 +100,7 @@ MonoBehaviour:
   isGameInPause: 0
   gameOver: 0
   fTimeInvestigation: 5
-  fTimeInvestigationMax: 10000
+  fTimeInvestigationMax: 5
   fTimeDay: 0
   score: 0
   fImmunityfCurrent: 0

@@ -66,7 +66,7 @@ public class MenuManager : MonoBehaviour
 
     public void ReturnTitle(){
         Time.timeScale = 0;
-        SceneManager.LoadScene("ScenePierre");
+        SceneManager.LoadScene("SceneGlass");
         pausePanel.SetActive(false);
     }
 
@@ -75,7 +75,7 @@ public class MenuManager : MonoBehaviour
         pausePanel.SetActive(false);
         gamePanel.SetActive(true);
         gameOverPanel.SetActive(false);
-        SceneManager.LoadScene("ScenePierre");
+        SceneManager.LoadScene("SceneGlass");
         Time.timeScale = 1;
     }
     public void QuitGame(){
