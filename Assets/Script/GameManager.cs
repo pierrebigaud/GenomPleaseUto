@@ -104,7 +104,7 @@ public class GameManager : MonoBehaviour
     private void FixedUpdate()
     {
         timer.GetComponent<TextMesh>().text = Math.Round(fTimeDay, 2) + "";
-        slider.GetComponentInChildren<Image>().color = new Color(Mathf.Clamp((fImmunityfCurrent / fImmunityLimite), 0, 1), 1, 0.5f, Mathf.Clamp((1 - fImmunityfCurrent / fImmunityLimite), 1, 1));
+        slider.GetComponentInChildren<Image>().color = new Color(Mathf.Clamp((fImmunityfCurrent / fImmunityLimite), 1, 1), 1, 0.5f, Mathf.Clamp((1 - fImmunityfCurrent / fImmunityLimite), 1, 1));
         slider.value = fImmunityfCurrent;
         //if not in pause
         if (!isGameInPause || !gameOver)

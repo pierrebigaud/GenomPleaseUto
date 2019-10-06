@@ -30,6 +30,7 @@ Transform:
   m_Children:
   - {fileID: 8226281326145627440}
   - {fileID: 5154148420129021056}
+  - {fileID: 7651027718503131014}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -52,6 +53,101 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!1001 &6382066445050511733
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 6108779162494853777}
+    m_Modifications:
+    - target: {fileID: 7228866427613503371, guid: e723c3b74bba8814b8704e883af71f9e,
+        type: 3}
+      propertyPath: m_Name
+      value: Lymph
+      objectReference: {fileID: 0}
+    - target: {fileID: 7228866427613503371, guid: e723c3b74bba8814b8704e883af71f9e,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3655883525777188595, guid: e723c3b74bba8814b8704e883af71f9e,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3655883525777188595, guid: e723c3b74bba8814b8704e883af71f9e,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3655883525777188595, guid: e723c3b74bba8814b8704e883af71f9e,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3655883525777188595, guid: e723c3b74bba8814b8704e883af71f9e,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3655883525777188595, guid: e723c3b74bba8814b8704e883af71f9e,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3655883525777188595, guid: e723c3b74bba8814b8704e883af71f9e,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3655883525777188595, guid: e723c3b74bba8814b8704e883af71f9e,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3655883525777188595, guid: e723c3b74bba8814b8704e883af71f9e,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3655883525777188595, guid: e723c3b74bba8814b8704e883af71f9e,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3655883525777188595, guid: e723c3b74bba8814b8704e883af71f9e,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3655883525777188595, guid: e723c3b74bba8814b8704e883af71f9e,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3655883525777188595, guid: e723c3b74bba8814b8704e883af71f9e,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3655883525777188595, guid: e723c3b74bba8814b8704e883af71f9e,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3655883525777188595, guid: e723c3b74bba8814b8704e883af71f9e,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.5
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: e723c3b74bba8814b8704e883af71f9e, type: 3}
+--- !u!4 &7651027718503131014 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3655883525777188595, guid: e723c3b74bba8814b8704e883af71f9e,
+    type: 3}
+  m_PrefabInstance: {fileID: 6382066445050511733}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &6570998716711903406
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -150,6 +246,16 @@ PrefabInstance:
       propertyPath: genome
       value: 
       objectReference: {fileID: 7182683979327493167}
+    - target: {fileID: 7738977061712180581, guid: 5d18ef6bdee7a1045a2d269d09d7c63e,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 7738977061712180581, guid: 5d18ef6bdee7a1045a2d269d09d7c63e,
+        type: 3}
+      propertyPath: m_WasSpriteAssigned
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1843439360610986236, guid: 5d18ef6bdee7a1045a2d269d09d7c63e,
         type: 3}
       propertyPath: m_MaskInteraction
