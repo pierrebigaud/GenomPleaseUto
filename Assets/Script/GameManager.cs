@@ -16,6 +16,9 @@ public class GameManager : MonoBehaviour
     public Slider slider;
     public bool isGameInPause, gameOver;
 
+    // levels to attach with tags
+    public LevelManager days;
+
     // time comparing the investigation of the cell
     public float fTimeInvestigation;
     public float fTimeInvestigationMax = 10;
@@ -51,6 +54,9 @@ public class GameManager : MonoBehaviour
     private void Start() {
         slider.maxValue = fImmunityLimite;
         timer.text = fTimeInvestigation + "";
+        days = GameObject.FindGameObjectWithTag("days").GetComponent<LevelManager>();
+        days.GameChanger = this;
+        days.ModifCellCycler = Cells;
     }
 
     // test of the cell
@@ -112,7 +118,6 @@ public class GameManager : MonoBehaviour
             }
             if (fImmunityfCurrent > fImmunityLimite)
             {
-                ReloadGame();
                 gameOver = true;
             }
 
@@ -137,6 +142,7 @@ public class GameManager : MonoBehaviour
                 /// 
                 /// this condition access another day to the difficulty settings
                 /// 
+                days.NextLevel();
             }
 
             // soustract time
@@ -151,10 +157,5 @@ public class GameManager : MonoBehaviour
         text.SetActive(true);
         yield return new WaitForSeconds(2);
         text.SetActive(false);
-    }
-
-    public void ReloadGame()
-    {
-        fImmunityfCurrent = fImmunityBegin;
     }
 }
