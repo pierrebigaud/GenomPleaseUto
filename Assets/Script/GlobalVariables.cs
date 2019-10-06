@@ -19,8 +19,7 @@ public class GlobalVariables : MonoBehaviour
     public void initGenomes()
     {
         int nbGenome = Random.Range(0, genomeList.Length);
-        Debug.Log(nbGenome);
-        Debug.Log(genomeList);
+     
 
         wrongGenome = genomeList[nbGenome];
         infoBoard.GetComponentInChildren<Image>().sprite = genomeTemplateList[nbGenome];

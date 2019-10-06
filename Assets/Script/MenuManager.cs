@@ -13,14 +13,19 @@ public class MenuManager : MonoBehaviour
     public GameObject pausePanel;
     public GameObject gameOverPanel;
     public GameObject _GameManager;
+    public GameObject _MagifyinGlass;
+
     private GameManager script;
+    private MagnifyingGlassScript scriptMagnifying;
 
     private AudioSource audioSource;
     private bool playAudio = true;
+    private bool showGlass = false;
 
     // Start is called before the first frame update
     void Start()
     {
+        scriptMagnifying = _MagifyinGlass.GetComponent<MagnifyingGlassScript>();
         Time.timeScale = 0; 
         titlePanel.SetActive(true);
         audioSource = GetComponent<AudioSource>();
@@ -40,6 +45,7 @@ public class MenuManager : MonoBehaviour
      
        script = _GameManager.GetComponent<GameManager>();
         if(script.gameOver){
+            hideMagnifyingGlass();
             gamePanel.SetActive(false);
             if(playAudio){
                 audioSource.clip = null;
@@ -62,13 +68,24 @@ public class MenuManager : MonoBehaviour
         audioSource.Play();
     }
 
+    public void hideMagnifyingGlass(){
+        showGlass = true;
+        _MagifyinGlass.SetActive(false);
+    }
+
     public void Pause(){
+       
+        hideMagnifyingGlass();
         Time.timeScale = 0;
         gamePanel.SetActive(false);
         pausePanel.SetActive(true);
     }
 
     public void ResumeGame(){
+        if(showGlass){
+            showGlass = false;
+            _MagifyinGlass.SetActive(true);
+        }
         gamePanel.SetActive(true);
         pausePanel.SetActive(false);
         Time.timeScale = 1;
@@ -76,7 +93,7 @@ public class MenuManager : MonoBehaviour
 
     public void ReturnTitle(){
         Time.timeScale = 0;
-        SceneManager.LoadScene("SceneLivio");
+        SceneManager.LoadScene("Scene Gwen");
         pausePanel.SetActive(false);
     }
 
@@ -85,7 +102,7 @@ public class MenuManager : MonoBehaviour
         pausePanel.SetActive(false);
         gamePanel.SetActive(true);
         gameOverPanel.SetActive(false);
-        SceneManager.LoadScene("SceneLivio");
+        SceneManager.LoadScene("Scene Gwen");
         Time.timeScale = 1;
     }
 

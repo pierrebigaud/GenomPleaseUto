@@ -59,7 +59,7 @@ public class LevelManager : MonoBehaviour
         {
             Debug.Log("reboot");
             index = 0;
-            SceneManager.LoadScene("SceneLivio");
+            SceneManager.LoadScene("Scene Gwen");
         }
         else{
             // if we reached the last levels
