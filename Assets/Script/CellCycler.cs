@@ -25,6 +25,7 @@ public class CellCycler : MonoBehaviour
     public AudioClip goodCellDestroy;
     public AudioClip badCellPasses;
     public AudioClip goodCellPasses;
+    public Sprite explode;
 
     void Start()
     {
@@ -82,6 +83,13 @@ public class CellCycler : MonoBehaviour
     public void doCellCycle()
     {
         depart(cells[5]);
+        StartCoroutine(moveCells());
+        
+        StartCoroutine(addCell());
+    }
+
+    public IEnumerator moveCells(){
+        yield return new WaitForSeconds(1);
         cells[4].transform.DOMove(new Vector3(pos5[0], pos5[1], 0), 1);
         cells[4].transform.localScale = new Vector3(1.5f, 1.5f, 1f);
         cells[5] = cells[4];
@@ -97,13 +105,12 @@ public class CellCycler : MonoBehaviour
         cells[0].transform.DOMove(new Vector3(pos1[0], pos1[1], 0), 1);
         cells[0].transform.localScale = new Vector3(.5f, .5f, 1f);
         cells[1] = cells[0];
-        StartCoroutine(addCell());
     }
 
     //Add a new Cell to the list
     public IEnumerator addCell()
     {
-        yield return new WaitForSeconds(0);
+        yield return new WaitForSeconds(1);
         cells[0] = Instantiate(cellObject, new Vector3(pos0[0], pos0[1], 0), Quaternion.identity);
         cells[0].transform.localScale = new Vector3(.4f, .4f, 1f);
         cells[0].transform.name = "Cell No " + cellId++;
@@ -114,13 +121,17 @@ public class CellCycler : MonoBehaviour
     public void depart(GameObject cell)
     {
         cell.GetComponentInChildren<CelluleBehaviour>().genome.SetActive(false);
-        cell.transform.DOScale(0.5f, 1f);
-        cell.transform.GetComponent<Animator>().SetBool("isMoving", true);
-        cell.transform.DOMove(new Vector3(10.0f, 0.0f, 0), 1.0f);
-    
 
         if (cell.GetComponentInChildren<CelluleBehaviour>().isRejected)
         {
+            
+            Transform lymph = cell.transform.Find("Lymph");
+            lymph.gameObject.SetActive(true);
+            lymph.DOMove(new Vector3(0, -5.0f, 0), 1.0f);
+            StartCoroutine(deleteLymph(lymph.gameObject, cell));
+
+            
+
             //TODO - Do cell killing animation
             if (cell.GetComponentInChildren<CelluleBehaviour>().isBad)
             {
@@ -135,6 +146,8 @@ public class CellCycler : MonoBehaviour
         }
         else
         {
+            cell.transform.DOScale(0.5f, 1f);
+            cell.transform.DOMove(new Vector3(10.0f, 0.0f, 0), 1.0f);
             if (cell.GetComponentInChildren<CelluleBehaviour>().isBad)
             {
                 //TODO - negative animation
@@ -151,7 +164,20 @@ public class CellCycler : MonoBehaviour
 
     public IEnumerator deleteCell(GameObject cell)
     {
-        yield return new WaitForSeconds(1);
+        yield return new WaitForSeconds(1f);
         Destroy(cell.transform.gameObject);
+    }
+
+    public IEnumerator deleteLymph(GameObject lymph, GameObject cell)
+    {
+        yield return new WaitForSeconds(0.2f);
+        Destroy(lymph.transform.gameObject);
+        for (int a = 0; a < cell.transform.GetChild(0).transform.childCount; a++)
+            {
+                 cell.transform.GetChild(0).transform.GetChild(a).gameObject.SetActive(false);
+            }
+        cell.transform.localScale = new Vector2(0.8f, 1.0f);
+        SpriteRenderer renderer = cell.AddComponent<SpriteRenderer>();
+        renderer.sprite = explode;
     }
 }
