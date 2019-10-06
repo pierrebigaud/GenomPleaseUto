@@ -58,7 +58,7 @@ public class LevelManager : MonoBehaviour
         if (days.Length<=0)
         {
             index = 0;
-            SceneManager.LoadScene("SceneLivio");
+            SceneManager.LoadScene("Scene Gwen");
         }
         else{
             // if we reached the last levels

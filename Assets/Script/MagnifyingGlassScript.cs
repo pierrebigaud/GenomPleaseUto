@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using DG.Tweening;
 
+using UnityEngine.UI;
+
 public class MagnifyingGlassScript : MonoBehaviour
 {
     // Start is called before the first frame update
@@ -11,12 +13,16 @@ public class MagnifyingGlassScript : MonoBehaviour
     private bool isOn = false;
     public GameObject tentacule;
 
+    public Button destroyButton;
+    public Button okButton;
+
     public void useMagnifyingGlass(float speed=1)
     {
         if (isOn)
         {
+            destroyButton.GetComponent<Button>().interactable = true;
+            okButton.GetComponent<Button>().interactable = true;
             transform.DOMove(new Vector3(pos0[0], pos0[1], -6), speed);
-            
             isOn = false;
         }
         else
@@ -24,7 +30,8 @@ public class MagnifyingGlassScript : MonoBehaviour
             tentacule.GetComponent<Animator>().ResetTrigger("pushButton");
             tentacule.GetComponent<Animator>().SetTrigger("pushButton");
             transform.DOMove(new Vector3(pos1[0], pos1[1], -6), 1);
-         
+            destroyButton.GetComponent<Button>().interactable = false;
+            okButton.GetComponent<Button>().interactable = false;
             isOn = true;
         }
     }
