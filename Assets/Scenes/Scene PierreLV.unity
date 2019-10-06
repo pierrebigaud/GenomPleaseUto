@@ -509,7 +509,7 @@ PrefabInstance:
     - target: {fileID: 2339025229752918719, guid: c89e123043d058d4d840b9eeb95e33de,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 18.909912
+      value: 18.90992
       objectReference: {fileID: 0}
     - target: {fileID: 2339025229752918713, guid: c89e123043d058d4d840b9eeb95e33de,
         type: 3}
@@ -1049,11 +1049,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1048378199347406163, guid: ac6823c476b8d73488f54d5720e29c18,
         type: 3}
-      propertyPath: days.Array.size
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 1048378199347406163, guid: ac6823c476b8d73488f54d5720e29c18,
-        type: 3}
       propertyPath: ModifCellCycler
       value: 
       objectReference: {fileID: 981563384}
@@ -1062,104 +1057,6 @@ PrefabInstance:
       propertyPath: GameChanger
       value: 
       objectReference: {fileID: 1138138193}
-    - target: {fileID: 1048378199347406163, guid: ac6823c476b8d73488f54d5720e29c18,
-        type: 3}
-      propertyPath: days.Array.data[0].fTimeDaysLevel
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 1048378199347406163, guid: ac6823c476b8d73488f54d5720e29c18,
-        type: 3}
-      propertyPath: days.Array.data[0].fTimeInvestigationLevel
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 1048378199347406163, guid: ac6823c476b8d73488f54d5720e29c18,
-        type: 3}
-      propertyPath: days.Array.data[0].fMistakeTime
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1048378199347406163, guid: ac6823c476b8d73488f54d5720e29c18,
-        type: 3}
-      propertyPath: days.Array.data[0].fMistakeGoodDestroy
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1048378199347406163, guid: ac6823c476b8d73488f54d5720e29c18,
-        type: 3}
-      propertyPath: days.Array.data[0].fMistakeBadLetPass
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1048378199347406163, guid: ac6823c476b8d73488f54d5720e29c18,
-        type: 3}
-      propertyPath: days.Array.data[0].gEmptycellule
-      value: 
-      objectReference: {fileID: 6108779162494853783, guid: f9a361930c583664a9ef0d5af338869e,
-        type: 3}
-    - target: {fileID: 1048378199347406163, guid: ac6823c476b8d73488f54d5720e29c18,
-        type: 3}
-      propertyPath: days.Array.data[1].fTimeDaysLevel
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 1048378199347406163, guid: ac6823c476b8d73488f54d5720e29c18,
-        type: 3}
-      propertyPath: days.Array.data[1].fTimeInvestigationLevel
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 1048378199347406163, guid: ac6823c476b8d73488f54d5720e29c18,
-        type: 3}
-      propertyPath: days.Array.data[1].fMistakeTime
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 1048378199347406163, guid: ac6823c476b8d73488f54d5720e29c18,
-        type: 3}
-      propertyPath: days.Array.data[1].fMistakeGoodDestroy
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 1048378199347406163, guid: ac6823c476b8d73488f54d5720e29c18,
-        type: 3}
-      propertyPath: days.Array.data[1].fMistakeBadLetPass
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 1048378199347406163, guid: ac6823c476b8d73488f54d5720e29c18,
-        type: 3}
-      propertyPath: days.Array.data[1].gEmptycellule
-      value: 
-      objectReference: {fileID: 6108779162494853783, guid: d1e66649ce4c2514c86c344a0159087e,
-        type: 3}
-    - target: {fileID: 1048378199347406163, guid: ac6823c476b8d73488f54d5720e29c18,
-        type: 3}
-      propertyPath: fImmunityGain
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 1048378199347406163, guid: ac6823c476b8d73488f54d5720e29c18,
-        type: 3}
-      propertyPath: days.Array.data[2].fTimeDaysLevel
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 1048378199347406163, guid: ac6823c476b8d73488f54d5720e29c18,
-        type: 3}
-      propertyPath: days.Array.data[2].fTimeInvestigationLevel
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 1048378199347406163, guid: ac6823c476b8d73488f54d5720e29c18,
-        type: 3}
-      propertyPath: days.Array.data[2].fMistakeTime
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 1048378199347406163, guid: ac6823c476b8d73488f54d5720e29c18,
-        type: 3}
-      propertyPath: days.Array.data[2].fMistakeGoodDestroy
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 1048378199347406163, guid: ac6823c476b8d73488f54d5720e29c18,
-        type: 3}
-      propertyPath: days.Array.data[2].fMistakeBadLetPass
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 1048378199347406163, guid: ac6823c476b8d73488f54d5720e29c18,
-        type: 3}
-      propertyPath: days.Array.data[2].gEmptycellule
-      value: 
-      objectReference: {fileID: 6108779162494853783, guid: d8eac15bb0716e140873095168702516,
-        type: 3}
     - target: {fileID: 3253844897198792343, guid: ac6823c476b8d73488f54d5720e29c18,
         type: 3}
       propertyPath: m_LocalPosition.x

@@ -882,11 +882,66 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 2339025230197508192, guid: c89e123043d058d4d840b9eeb95e33de,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2339025230197508187, guid: c89e123043d058d4d840b9eeb95e33de,
+        type: 3}
+      propertyPath: gameOverTheme
+      value: 
+      objectReference: {fileID: 8300000, guid: d815797cc3602234ba09a4787f9fbd46, type: 3}
+    - target: {fileID: 2339025230197508187, guid: c89e123043d058d4d840b9eeb95e33de,
+        type: 3}
+      propertyPath: mainTheme
+      value: 
+      objectReference: {fileID: 8300000, guid: 6b630b23407c6804ca484537ddc47d8f, type: 3}
+    - target: {fileID: 2339025230197508187, guid: c89e123043d058d4d840b9eeb95e33de,
+        type: 3}
+      propertyPath: _MagifyinGlass
+      value: 
+      objectReference: {fileID: 47853376}
+    - target: {fileID: 2339025230197508187, guid: c89e123043d058d4d840b9eeb95e33de,
+        type: 3}
+      propertyPath: _GameManager
+      value: 
+      objectReference: {fileID: 1138138192}
     - target: {fileID: 2339025230019699863, guid: c89e123043d058d4d840b9eeb95e33de,
         type: 3}
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2339025229752918713, guid: c89e123043d058d4d840b9eeb95e33de,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1138138193}
+    - target: {fileID: 2339025229752918713, guid: c89e123043d058d4d840b9eeb95e33de,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2339025229752918713, guid: c89e123043d058d4d840b9eeb95e33de,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_BoolArgument
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2339025229752918713, guid: c89e123043d058d4d840b9eeb95e33de,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2339025230563868491, guid: c89e123043d058d4d840b9eeb95e33de,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 1138138193}
+    - target: {fileID: 2339025230563868491, guid: c89e123043d058d4d840b9eeb95e33de,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1138138193}
     - target: {fileID: 2339025230019699859, guid: c89e123043d058d4d840b9eeb95e33de,
         type: 3}
       propertyPath: explode
@@ -923,41 +978,6 @@ PrefabInstance:
       propertyPath: destroySound
       value: 
       objectReference: {fileID: 8300000, guid: c48f1d62189b24d4e86f61df4983aee2, type: 3}
-    - target: {fileID: 2339025230197508187, guid: c89e123043d058d4d840b9eeb95e33de,
-        type: 3}
-      propertyPath: gameOverTheme
-      value: 
-      objectReference: {fileID: 8300000, guid: d815797cc3602234ba09a4787f9fbd46, type: 3}
-    - target: {fileID: 2339025230197508187, guid: c89e123043d058d4d840b9eeb95e33de,
-        type: 3}
-      propertyPath: mainTheme
-      value: 
-      objectReference: {fileID: 8300000, guid: 6b630b23407c6804ca484537ddc47d8f, type: 3}
-    - target: {fileID: 2339025230197508187, guid: c89e123043d058d4d840b9eeb95e33de,
-        type: 3}
-      propertyPath: _MagifyinGlass
-      value: 
-      objectReference: {fileID: 47853376}
-    - target: {fileID: 2339025230197508187, guid: c89e123043d058d4d840b9eeb95e33de,
-        type: 3}
-      propertyPath: _GameManager
-      value: 
-      objectReference: {fileID: 1138138192}
-    - target: {fileID: 2339025230563868491, guid: c89e123043d058d4d840b9eeb95e33de,
-        type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
-      value: 
-      objectReference: {fileID: 1138138193}
-    - target: {fileID: 2339025230563868491, guid: c89e123043d058d4d840b9eeb95e33de,
-        type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 1138138193}
-    - target: {fileID: 2339025230197508192, guid: c89e123043d058d4d840b9eeb95e33de,
-        type: 3}
-      propertyPath: m_RootOrder
-      value: 2
-      objectReference: {fileID: 0}
     - target: {fileID: 2339025230197508199, guid: c89e123043d058d4d840b9eeb95e33de,
         type: 3}
       propertyPath: m_Camera
@@ -972,26 +992,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 18.909912
-      objectReference: {fileID: 0}
-    - target: {fileID: 2339025229752918713, guid: c89e123043d058d4d840b9eeb95e33de,
-        type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 1138138193}
-    - target: {fileID: 2339025229752918713, guid: c89e123043d058d4d840b9eeb95e33de,
-        type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_Mode
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2339025229752918713, guid: c89e123043d058d4d840b9eeb95e33de,
-        type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_BoolArgument
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2339025229752918713, guid: c89e123043d058d4d840b9eeb95e33de,
-        type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_CallState
-      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 2339025230174536028, guid: c89e123043d058d4d840b9eeb95e33de,
         type: 3}
@@ -1750,6 +1750,72 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1048378199347406163, guid: ac6823c476b8d73488f54d5720e29c18,
+        type: 3}
+      propertyPath: days.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 1048378199347406163, guid: ac6823c476b8d73488f54d5720e29c18,
+        type: 3}
+      propertyPath: ModifCellCycler
+      value: 
+      objectReference: {fileID: 981563384}
+    - target: {fileID: 1048378199347406163, guid: ac6823c476b8d73488f54d5720e29c18,
+        type: 3}
+      propertyPath: GameChanger
+      value: 
+      objectReference: {fileID: 1138138193}
+    - target: {fileID: 1048378199347406163, guid: ac6823c476b8d73488f54d5720e29c18,
+        type: 3}
+      propertyPath: nextDay
+      value: 
+      objectReference: {fileID: 8300000, guid: 82fc91b3580d09a4ab76eff253c5d7db, type: 3}
+    - target: {fileID: 1048378199347406163, guid: ac6823c476b8d73488f54d5720e29c18,
+        type: 3}
+      propertyPath: red
+      value: 
+      objectReference: {fileID: 1364998548}
+    - target: {fileID: 1048378199347406163, guid: ac6823c476b8d73488f54d5720e29c18,
+        type: 3}
+      propertyPath: days.Array.data[1].fTimeDaysLevel
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 1048378199347406163, guid: ac6823c476b8d73488f54d5720e29c18,
+        type: 3}
+      propertyPath: days.Array.data[2].fTimeDaysLevel
+      value: 40
+      objectReference: {fileID: 0}
+    - target: {fileID: 1048378199347406163, guid: ac6823c476b8d73488f54d5720e29c18,
+        type: 3}
+      propertyPath: days.Array.data[3].fTimeDaysLevel
+      value: 60
+      objectReference: {fileID: 0}
+    - target: {fileID: 1048378199347406163, guid: ac6823c476b8d73488f54d5720e29c18,
+        type: 3}
+      propertyPath: days.Array.data[3].fTimeInvestigationLevel
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 1048378199347406163, guid: ac6823c476b8d73488f54d5720e29c18,
+        type: 3}
+      propertyPath: days.Array.data[3].fMistakeTime
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1048378199347406163, guid: ac6823c476b8d73488f54d5720e29c18,
+        type: 3}
+      propertyPath: days.Array.data[3].fMistakeGoodDestroy
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1048378199347406163, guid: ac6823c476b8d73488f54d5720e29c18,
+        type: 3}
+      propertyPath: days.Array.data[3].fMistakeBadLetPass
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1048378199347406163, guid: ac6823c476b8d73488f54d5720e29c18,
+        type: 3}
+      propertyPath: days.Array.data[3].gEmptycellule
+      value: 
+      objectReference: {fileID: 6108779162494853783, guid: 675841db4ed24794ab86bfa486ff166b,
+        type: 3}
     - target: {fileID: 3253844897198792343, guid: ac6823c476b8d73488f54d5720e29c18,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1805,26 +1871,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 1048378199347406163, guid: ac6823c476b8d73488f54d5720e29c18,
-        type: 3}
-      propertyPath: ModifCellCycler
-      value: 
-      objectReference: {fileID: 981563384}
-    - target: {fileID: 1048378199347406163, guid: ac6823c476b8d73488f54d5720e29c18,
-        type: 3}
-      propertyPath: GameChanger
-      value: 
-      objectReference: {fileID: 1138138193}
-    - target: {fileID: 1048378199347406163, guid: ac6823c476b8d73488f54d5720e29c18,
-        type: 3}
-      propertyPath: nextDay
-      value: 
-      objectReference: {fileID: 8300000, guid: 82fc91b3580d09a4ab76eff253c5d7db, type: 3}
-    - target: {fileID: 1048378199347406163, guid: ac6823c476b8d73488f54d5720e29c18,
-        type: 3}
-      propertyPath: red
-      value: 
-      objectReference: {fileID: 1364998548}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ac6823c476b8d73488f54d5720e29c18, type: 3}
 --- !u!1001 &7733812972091288611
@@ -1834,11 +1880,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 3953670752224422368, guid: be276e5c446d04247966038105608974,
-        type: 3}
-      propertyPath: m_RootOrder
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 3953670752224422370, guid: be276e5c446d04247966038105608974,
         type: 3}
       propertyPath: Cells
@@ -1942,6 +1983,11 @@ PrefabInstance:
         type: 3}
       propertyPath: fTimeDay
       value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 3953670752224422368, guid: be276e5c446d04247966038105608974,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7733812971286500769, guid: be276e5c446d04247966038105608974,
         type: 3}
