@@ -41,11 +41,11 @@ public class MenuManager : MonoBehaviour
        script = _GameManager.GetComponent<GameManager>();
         if(script.gameOver){
             gamePanel.SetActive(false);
+            
+            StartCoroutine(ReturnTitleAfterTime());
             gameOverPanel.SetActive(true);
             audioSource.clip = gameOverTheme;
             audioSource.Play();
-            
-            Time.timeScale = 0; 
         }
 
     }
@@ -85,9 +85,17 @@ public class MenuManager : MonoBehaviour
         SceneManager.LoadScene("SceneLivio");
         Time.timeScale = 1;
     }
+
+  
+
     public void QuitGame(){
         Application.Quit();
     }
-
+ 
+    IEnumerator ReturnTitleAfterTime()
+    {
+        yield return new WaitForSeconds(10);
+        ReturnTitle();
+    }
 
 }
