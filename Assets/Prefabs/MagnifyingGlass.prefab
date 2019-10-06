@@ -142,3 +142,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: db3314af525536a4e801985215d1b36f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  tentacule: {fileID: 8906059641765436964, guid: 4bfe391613a64eb498b66e09fb7a8b28,
+    type: 3}
