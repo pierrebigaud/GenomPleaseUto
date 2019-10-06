@@ -33,11 +33,12 @@ public class MenuManager : MonoBehaviour
        }
        script = _GameManager.GetComponent<GameManager>();
         if(script.gameOver){
-            Time.timeScale = 0; 
             gamePanel.SetActive(false);
             gameOverPanel.SetActive(true);
             audioSource.clip = gameOverTheme;
             audioSource.Play();
+            
+            Time.timeScale = 0; 
         }
 
     }
