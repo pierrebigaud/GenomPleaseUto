@@ -728,6 +728,21 @@ PrefabInstance:
       propertyPath: m_Name
       value: Canvas
       objectReference: {fileID: 0}
+    - target: {fileID: 6644271593693962825, guid: c89e123043d058d4d840b9eeb95e33de,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1138138193}
+    - target: {fileID: 6644271593781430835, guid: c89e123043d058d4d840b9eeb95e33de,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1138138193}
+    - target: {fileID: 6644271592895879057, guid: c89e123043d058d4d840b9eeb95e33de,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1662341936}
     - target: {fileID: 6644271594605156584, guid: c89e123043d058d4d840b9eeb95e33de,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -848,26 +863,16 @@ PrefabInstance:
       propertyPath: _MagifyinGlass
       value: 
       objectReference: {fileID: 47853376}
+    - target: {fileID: 6644271594605156587, guid: c89e123043d058d4d840b9eeb95e33de,
+        type: 3}
+      propertyPath: _BlackScreen
+      value: 
+      objectReference: {fileID: 1542346685}
     - target: {fileID: 6644271592895879063, guid: c89e123043d058d4d840b9eeb95e33de,
         type: 3}
       propertyPath: m_LocalPosition.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 6644271592895879057, guid: c89e123043d058d4d840b9eeb95e33de,
-        type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 1662341936}
-    - target: {fileID: 6644271593781430835, guid: c89e123043d058d4d840b9eeb95e33de,
-        type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 1138138193}
-    - target: {fileID: 6644271593693962825, guid: c89e123043d058d4d840b9eeb95e33de,
-        type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 1138138193}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c89e123043d058d4d840b9eeb95e33de, type: 3}
 --- !u!1001 &6836886887820133684

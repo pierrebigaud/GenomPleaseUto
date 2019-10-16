@@ -14,6 +14,7 @@ public class MenuManager : MonoBehaviour
     public GameObject gameOverPanel;
     public GameObject _GameManager;
     public GameObject _MagifyinGlass;
+    public GameObject _BlackScreen;
 
     private GameManager script;
     private MagnifyingGlassScript scriptMagnifying;
@@ -71,10 +72,10 @@ public class MenuManager : MonoBehaviour
     public void hideMagnifyingGlass(){
         showGlass = true;
         _MagifyinGlass.SetActive(false);
+        _BlackScreen.SetActive(false);        
     }
 
-    public void Pause(){
-       
+    public void Pause(){       
         hideMagnifyingGlass();
         Time.timeScale = 0;
         gamePanel.SetActive(false);
@@ -85,6 +86,7 @@ public class MenuManager : MonoBehaviour
         if(showGlass){
             showGlass = false;
             _MagifyinGlass.SetActive(true);
+            _BlackScreen.SetActive(true);
         }
         gamePanel.SetActive(true);
         pausePanel.SetActive(false);
