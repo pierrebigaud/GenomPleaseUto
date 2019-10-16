@@ -39,7 +39,7 @@ public class MagnifyingGlassScript : MonoBehaviour
         {
             isOn = true;
             blackScreen.SetActive(true);
-            sptRenderer.DOFade(0.9f, 1f);
+            sptRenderer.DOFade(0.8f, 1f);
             tentacule.GetComponent<Animator>().ResetTrigger("pushButton");
             tentacule.GetComponent<Animator>().SetTrigger("pushButton");
             transform.DOMove(new Vector3(pos1[0], pos1[1], -6), speed);
