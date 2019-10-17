@@ -1118,6 +1118,7 @@ MonoBehaviour:
   goodCellPasses: {fileID: 8300000, guid: f61e94a99d3f75a46a2f5aae1c739461, type: 3}
   destroySound: {fileID: 8300000, guid: c48f1d62189b24d4e86f61df4983aee2, type: 3}
   explode: {fileID: 21300000, guid: 42f93118dcbfb1f488c38286bd7dad3d, type: 3}
+  score: 0
 --- !u!82 &6644271593733465154
 AudioSource:
   m_ObjectHideFlags: 0
@@ -1741,6 +1742,8 @@ MonoBehaviour:
   gameOverPanel: {fileID: 6644271593790122125}
   _GameManager: {fileID: 0}
   _MagifyinGlass: {fileID: 0}
+  _BlackScreen: {fileID: 0}
+  _Tentacule: {fileID: 6644271594421941338}
 --- !u!1 &6644271594458758584
 GameObject:
   m_ObjectHideFlags: 0
@@ -2118,15 +2121,21 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a1df1f29fa7ee65498e34c980efb4f77, type: 3}
---- !u!1 &6644271593291759827 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2720808887324759455, guid: a1df1f29fa7ee65498e34c980efb4f77,
-    type: 3}
-  m_PrefabInstance: {fileID: 8788616943694779724}
-  m_PrefabAsset: {fileID: 0}
 --- !u!224 &6644271593291759836 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 2720808887324759440, guid: a1df1f29fa7ee65498e34c980efb4f77,
+    type: 3}
+  m_PrefabInstance: {fileID: 8788616943694779724}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &6644271594421941338 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2720808885791547670, guid: a1df1f29fa7ee65498e34c980efb4f77,
+    type: 3}
+  m_PrefabInstance: {fileID: 8788616943694779724}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &6644271593291759827 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2720808887324759455, guid: a1df1f29fa7ee65498e34c980efb4f77,
     type: 3}
   m_PrefabInstance: {fileID: 8788616943694779724}
   m_PrefabAsset: {fileID: 0}
