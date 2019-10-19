@@ -29,7 +29,7 @@ public class GameManager : MonoBehaviour
     public float fTimeDay;
 
     // number of good answer
-    public int score;
+    public int score, malusGD = 10, malusBL = 20, BonusGL = 20,BonusBD = 40;
 
     // value of the deprime meter for the cell
     public float fImmunityfCurrent;
@@ -47,7 +47,7 @@ public class GameManager : MonoBehaviour
     // cell to be examined
     public CelluleBehaviour cellToExam;
     public GameObject tentacule;
-    public GameObject timer;
+    public GameObject timer,timerSmall;
     public GameObject goodCell;
     public GameObject badCell;
     public GameObject tooSlow;
@@ -86,13 +86,13 @@ public class GameManager : MonoBehaviour
         /// if you destroy a bad cell
         if (cellToExam.isBad && isDestroy)
         {
-            score++;
+            score+=BonusBD;
             cellToExam.isRejected = true;
         }
         // if you let pass a good cell
         else if (!cellToExam.isBad && !isDestroy)
         {
-            score++;
+            score+=BonusGL;
             cellToExam.isRejected = false;
         }
 
@@ -100,6 +100,7 @@ public class GameManager : MonoBehaviour
         // if you destroy a good cell
         else if (!cellToExam.isBad && isDestroy)
         {
+            score -= malusGD;
             cellToExam.isRejected = true;
             fImmunityfCurrent += fMistakeGoodCellDestroy;
             StartCoroutine(textAppear(goodCell, goodCellAudio));
@@ -108,6 +109,7 @@ public class GameManager : MonoBehaviour
         // if you pass a bad cell
         else if (cellToExam.isBad && !isDestroy)
         {
+            score -= malusBL;
             fImmunityfCurrent += fMistakeBadCellPass;
             cellToExam.isRejected = false;
             StartCoroutine(textAppear(badCell, badCellAudio));
@@ -125,10 +127,12 @@ public class GameManager : MonoBehaviour
         okBtn.GetComponent<Button>().interactable = true;
         destroyBtn.GetComponent<Button>().interactable = true;
     }
-    private void FixedUpdate()
+    private void Update()
     {
-        timer.GetComponent<TextMesh>().text = Math.Round(fTimeDay, 2) + "";
-        slider.GetComponentInChildren<Image>().color = new Color(Mathf.Clamp((fImmunityfCurrent / fImmunityLimite), 1, 1), 1, 0.5f, Mathf.Clamp((1 - fImmunityfCurrent / fImmunityLimite), 1, 1));
+        timer.GetComponent<TextMesh>().text = Math.Floor(fTimeDay) + "";
+        timerSmall.GetComponent<TextMesh>().text = "."+Mathf.Floor((fTimeDay- Mathf.Floor(fTimeDay))*10);
+        slider.GetComponentInChildren<Image>().color = 
+            new Color(Mathf.Clamp((fImmunityfCurrent / fImmunityLimite), 1, 1), 1, 0.5f, Mathf.Clamp((1 - fImmunityfCurrent / fImmunityLimite), 1, 1));
         slider.value = fImmunityfCurrent;
         //if not in pause
         if (!isGameInPause || !gameOver)

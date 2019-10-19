@@ -14,6 +14,7 @@ public class MenuManager : MonoBehaviour
     public GameObject gameOverPanel;
     public GameObject _GameManager;
     public GameObject _MagifyinGlass;
+    public GameObject _Score;
 
     private GameManager script;
     private MagnifyingGlassScript scriptMagnifying;
@@ -55,6 +56,7 @@ public class MenuManager : MonoBehaviour
            
             StartCoroutine(ReturnTitleAfterTime());
             gameOverPanel.SetActive(true);
+            _Score.GetComponent<TextMesh>().text = "Score:" + script.score;
         }
 
     }
