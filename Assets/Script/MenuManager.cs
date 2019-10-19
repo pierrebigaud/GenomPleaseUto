@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+using DG.Tweening;
 
 public class MenuManager : MonoBehaviour
 {
@@ -14,6 +15,8 @@ public class MenuManager : MonoBehaviour
     public GameObject gameOverPanel;
     public GameObject _GameManager;
     public GameObject _MagifyinGlass;
+    public GameObject _BlackScreen;
+    public GameObject _Tentacule;
     public GameObject _Score;
 
     private GameManager script;
@@ -73,20 +76,26 @@ public class MenuManager : MonoBehaviour
     public void hideMagnifyingGlass(){
         showGlass = true;
         _MagifyinGlass.SetActive(false);
+        _BlackScreen.SetActive(false);        
     }
 
     public void Pause(){
-       
+        //reset position tentacule
+        _Tentacule.GetComponent<RectTransform>().DOPivot(new Vector2(0.5f, 0.5f), 0);
+        _Tentacule.GetComponent<RectTransform>().DORotateQuaternion(new Quaternion(0, 0, 0, 0), 0);
         hideMagnifyingGlass();
         Time.timeScale = 0;
         gamePanel.SetActive(false);
         pausePanel.SetActive(true);
+
     }
 
     public void ResumeGame(){
         if(showGlass){
             showGlass = false;
             _MagifyinGlass.SetActive(true);
+            _BlackScreen.SetActive(true);
+
         }
         gamePanel.SetActive(true);
         pausePanel.SetActive(false);

@@ -27,9 +27,11 @@ public class CellCycler : MonoBehaviour
     public AudioClip goodCellPasses;
     public AudioClip destroySound;
     public Sprite explode;
+    public int score;
 
     void Start()
     {
+        score = 0;
         audioSource = GetComponent<AudioSource>();
         cells = new GameObject[6];
         StartCoroutine(initCellList());
@@ -43,6 +45,7 @@ public class CellCycler : MonoBehaviour
     //Position the 5 cells in the GUI on startup
     public IEnumerator initCellList()
     {
+        score = 0;
         cells[0] = Instantiate(cellObject, new Vector3(pos0[0], pos0[1], 0), Quaternion.identity);
         cells[0].transform.localScale = new Vector3(.4f, .4f, 1f);
         cells[0].transform.name = "Cell No 0";
@@ -124,24 +127,20 @@ public class CellCycler : MonoBehaviour
         cell.GetComponentInChildren<CelluleBehaviour>().genome.SetActive(false);
 
         if (cell.GetComponentInChildren<CelluleBehaviour>().isRejected)
-        {
-            
+        {            
             Transform lymph = cell.transform.Find("Lymph");
             lymph.gameObject.SetActive(true);
             lymph.DOMove(new Vector3(0, -5.0f, 0), 1.0f);
             StartCoroutine(deleteLymph(lymph.gameObject, cell));
-
-            
-
-            //TODO - Do cell killing animation
+                        
             if (cell.GetComponentInChildren<CelluleBehaviour>().isBad)
             {
-                //TODO - positive animation
+                score += 40;
                 audioSource.PlayOneShot(badCellDestroy, 1);
             }
             else
             {
-                //TODO - negative animation
+                score -= 10;
                 audioSource.PlayOneShot(goodCellDestroy, 1);
             }
         }
@@ -151,12 +150,12 @@ public class CellCycler : MonoBehaviour
             cell.transform.DOMove(new Vector3(10.0f, 0.0f, 0), 1.0f);
             if (cell.GetComponentInChildren<CelluleBehaviour>().isBad)
             {
-                //TODO - negative animation
+                score -= 50;
                 audioSource.PlayOneShot(badCellPasses, 1);
             }
             else
             {
-                //TODO - positive animation
+                score += 20;
                 audioSource.PlayOneShot(goodCellPasses, 1);
             }
         }
