@@ -28,9 +28,11 @@ public class CellCycler : MonoBehaviour
     public AudioClip destroySound;
     public Sprite explode;
     public int score;
+    private LevelManager levelManager;
 
     void Start()
     {
+        this.levelManager = GameObject.FindGameObjectWithTag("days").GetComponent<LevelManager>();
         score = 0;
         audioSource = GetComponent<AudioSource>();
         cells = new GameObject[6];
@@ -69,6 +71,7 @@ public class CellCycler : MonoBehaviour
         cells[5] = Instantiate(cellObject, new Vector3(pos5[0], pos5[1], 0), Quaternion.identity);
         cells[5].transform.localScale = new Vector3(1.5f, 1.5f, 1f);
         cells[5].transform.name = "Cell No 5";
+        
         yield return new WaitForSeconds(0.1f);
         cells[5].GetComponentInChildren<CelluleBehaviour>().genome.SetActive(true);        
     }
@@ -96,19 +99,43 @@ public class CellCycler : MonoBehaviour
         yield return new WaitForSeconds(1);
         cells[4].transform.DOMove(new Vector3(pos5[0], pos5[1], 0), 0.7f);
         cells[4].transform.localScale = new Vector3(1.5f, 1.5f, 1f);
+        setOpacity(cells[4], 1f);
         cells[5] = cells[4];
         cells[3].transform.DOMove(new Vector3(pos4[0], pos4[1], 0), 0.7f);
         cells[3].transform.localScale = new Vector3(.8f, .8f, 1f);
+        setOpacity(cells[2], 0.9f);
         cells[4] = cells[3];
         cells[2].transform.DOMove(new Vector3(pos3[0], pos3[1], 0), 0.7f);
         cells[2].transform.localScale = new Vector3(.7f, .7f, 1f);
+        setOpacity(cells[2],0.8f);
         cells[3] = cells[2];
         cells[1].transform.DOMove(new Vector3(pos2[0], pos2[1], 0), 0.7f);
         cells[1].transform.localScale = new Vector3(.6f, .6f, 1f);
+        setOpacity(cells[1], 0.7f);
         cells[2] = cells[1];
         cells[0].transform.DOMove(new Vector3(pos1[0], pos1[1], 0), 0.7f);
         cells[0].transform.localScale = new Vector3(.5f, .5f, 1f);
+        setOpacity(cells[0], 0.6f);
         cells[1] = cells[0];
+    }
+
+    public void setOpacity(GameObject cell, float opacity)
+    {
+        SpriteRenderer[] sprites = cell.transform.GetComponentsInChildren<SpriteRenderer>();
+        for (int i = 0; i < sprites.Length; i++)
+        {
+            sprites[i].color = new Color(1f, 1f, 1f, opacity);
+        }
+        Debug.Log(cell);
+        //plus la difficulte augmente plus l'opacite du virus diminue
+        if (cell.GetComponentInChildren<CelluleBehaviour>().virus != null && levelManager.nbrDays >= 2)
+        {
+            cell.GetComponentInChildren<CelluleBehaviour>().virus.GetComponent<SpriteRenderer>().color = new Color(1f, 1f, 1f, .5f);
+        }
+        if (cell.GetComponentInChildren<CelluleBehaviour>().virus != null && levelManager.nbrDays >= 4)
+        {
+            cell.GetComponentInChildren<CelluleBehaviour>().virus.GetComponent<SpriteRenderer>().color = new Color(1f, 1f, 1f, .2f);
+        }
     }
 
     //Add a new Cell to the list
@@ -118,6 +145,7 @@ public class CellCycler : MonoBehaviour
         cells[0] = Instantiate(cellObject, new Vector3(pos0[0], pos0[1], 0), Quaternion.identity);
         cells[0].transform.localScale = new Vector3(.4f, .4f, 1f);
         cells[0].transform.name = "Cell No " + cellId++;
+        setOpacity(cells[0], 0.5f);
         cells[5].GetComponentInChildren<CelluleBehaviour>().genome.SetActive(true);
     }
 
